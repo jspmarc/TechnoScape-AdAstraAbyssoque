@@ -1,90 +1,95 @@
+
 <template>
-  <div class="all">
-    <div class="title">
-      <h1 class="main">
-        {{getQuestions()}}
-      </h1>
-      <p class="sub">
-        (choose one picture)
-      </p>
+  <!-- Source: https://codesandbox.io/s/github/vuejs/vuejs.org/tree/master/src/v2/examples/vue-20-modal-component -->
+  <!-- Modal -->
+  <transition name="modal">
+    <div class="modal-mask">
+      <div class="modal-wrapper">
+        <div class="modal-container">
+
+          <!-- body -->
+          <Content />
+
+        </div>
+      </div>
     </div>
-    <ul class="answers">
-      <li v-for="(item, index) in getChoices()" :key="index">
-        <img :src="item.link" :alt="item.type" @click="onClick(item.type)">
-      </li>
-    </ul>
-  </div>
+  </transition>
 </template>
 
 <script>
-import data from '../../data/recommendationTest.json';
+import Content from './Content.vue';
 
 export default {
-  data() {
-    return {
-      recAns: this.$store.state.recAns,
-    }
-  },
-  methods: {
-    onClick(answer) {
-      this.recAns.push(answer);
-      const limit = data.length;
-
-      if (this.recAns.length >= limit) {
-        this.recAns.length = 0;
-      }
-    },
-    getQuestions() {
-      return data[this.recAns.length].question;
-    },
-    getChoices() {
-      return data[this.recAns.length].choices;
-    },
+  components: {
+    Content,
   },
 }
 </script>
 
-<style lang="scss" scoped>
-.all {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .title {
-    margin-bottom: 5rem;
-
-    .main {
-      font-size: 36px;
-      text-align: center;
-    }
-    .sub {
-      font-size: 24px;
-      text-align: center;
-    }
-  }
-
-  .answers {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-
-    width: 50vw;
-    height: 70vh;
-
-    li {
-      width: 20vw;
-      height: 30vh;
-      margin: 0 0 1rem 0;
-
-      img {
-        width: 20vw;
-        height: 30vh;
-        object-fit: cover;
-      }
-    }
-  }
+<style scoped>
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity 0.3s ease;
 }
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: fit-content;
+  border-radius: 1rem;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+}
+
+.modal-body {
+  margin: 20px 0;
+}
+
+.modal-default-button {
+  float: right;
+}
+
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 </style>
