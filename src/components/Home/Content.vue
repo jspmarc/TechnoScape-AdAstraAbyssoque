@@ -51,7 +51,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  height: 90vh;
+  height: 85vh;
 
   .title {
     margin-bottom: 5rem;

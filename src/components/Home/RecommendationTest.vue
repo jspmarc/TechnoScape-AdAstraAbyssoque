@@ -53,8 +53,9 @@ export default {
   flex-direction: column;
 
   width: fit-content;
+  height: 95vh;
   border-radius: 1rem;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 20px 30px;
   background-color: #FCFEFF;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
