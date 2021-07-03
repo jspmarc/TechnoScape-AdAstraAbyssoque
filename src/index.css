@@ -13,5 +13,23 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
 }
