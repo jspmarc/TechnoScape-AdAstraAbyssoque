@@ -1,9 +1,9 @@
 <template>
   <div class="nav px-20 py-8">
     <div class="nav-left flex items-center">
-      <div class="nav-link mr-10 font-bold">
+      <router-link class="nav-link mr-10 font-bold" to="/">
         <img class="logo" src="../../assets/logo.svg" />
-      </div>
+      </router-link>
       <router-link class="nav-link mr-10 font-bold" to="/">HOME</router-link>
       <router-link class="nav-link mr-10 font-bold" to="/">EXPLORE</router-link>
       <router-link class="nav-link mr-10 font-bold" to="/">
@@ -74,6 +74,11 @@ export default {
 .logo {
   width: 64px;
   height: 64px;
+  margin-right: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .nav-left {
@@ -107,14 +112,6 @@ export default {
   color: #8cb9fd;
   border-radius: 5px;
   height: 38px;
-}
-
-.icon {
-  margin-right: 10px;
-}
-
-.icon:hover {
-  cursor: pointer;
 }
 
 .search-input {
