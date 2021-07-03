@@ -33,7 +33,7 @@ export default {
   position: sticky;
   height: 50px;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 20px #c7e0ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
