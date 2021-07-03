@@ -1,7 +1,9 @@
 <template>
-  <Jumbotron/>
-  <TestBox/>
-  <HotelCard/>
+  <div>
+    <Jumbotron />
+    <TestBox />
+    <HotelCard />
+  </div>
 </template>
 
 <script>
@@ -13,7 +15,7 @@ export default {
   components: {
     Jumbotron,
     TestBox,
-    HotelCard
+    HotelCard,
   },
 };
 </script>
