@@ -10,11 +10,15 @@
     </div>
     <div class="nav-right">
       <div class="search-box">
-        <font-awesome-icon icon="search" class="icon"/>
-        <input type="text" class="search-input" placeholder="Search your vacation ...">
+        <font-awesome-icon icon="search" class="icon" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search your vacation ..."
+        />
       </div>
       <button class="button">
-        <router-link to="/Signup" class="button-link">
+        <router-link to="/signup" class="button-link">
           SIGN UP
         </router-link>
       </button>
@@ -28,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .nav {
   position: sticky;
   height: 50px;
@@ -49,7 +53,7 @@ export default {
 
 .button-link {
   text-decoration: none;
-  color: #FCFEFF;
+  color: #fcfeff;
 }
 
 .nav-link {
@@ -59,12 +63,16 @@ export default {
 }
 
 .search-box {
-  background: #E5F1FF;
+  background: #e5f1ff;
   display: flex;
   align-items: center;
   padding: 0 10px;
-  color: #8CB9FD;
+  color: #8cb9fd;
   border-radius: 5px;
+}
+
+.icon {
+  margin-right: 10px;
 }
 
 .icon:hover {
@@ -78,12 +86,12 @@ export default {
 }
 
 .search-input::placeholder {
-  color: #8CB9FD;
+  color: #8cb9fd;
 }
 
 .button {
   color: white;
-  background: #2759AA;
+  background: #2759aa;
   padding: 6px 15px;
   border: none;
   border-radius: 5px;
@@ -91,7 +99,19 @@ export default {
   margin-left: 15px;
 }
 
-input:focus, textarea:focus, select:focus{
+input {
+  width: 190px;
+  transition-duration: 0.5s;
+}
+
+input:focus {
+  width: 360px;
+  transition-duration: 0.5s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   color: #171123;
 }
