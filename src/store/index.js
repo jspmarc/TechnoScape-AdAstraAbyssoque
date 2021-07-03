@@ -1,33 +1,15 @@
 import { createStore } from "vuex";
+import state from "./state";
+import actions from "./actions";
+import getters from "./getters";
+import mutations from "./mutations";
 
 // Create a new store instance.
 const store = createStore({
-  state() {
-    return {
-      user: {
-        name: "John Doe",
-        email: "john.doe@gmail.com",
-      },
-      login: false,
-      number: 1,
-      queryNav: "",
-      query: "",
-      recAns: [],
-    };
-  },
-  actions: {},
-  mutations: {
-    increment(state) {
-      state.number += 1;
-    },
-    SET_QUERY(state, val) {
-      state.query = val;
-    },
-    SET_QUERYNAV(state, val) {
-      state.queryNav = val;
-    },
-  },
-  getters: {},
+  state,
+  actions,
+  getters,
+  mutations,
 });
 
 export default store;

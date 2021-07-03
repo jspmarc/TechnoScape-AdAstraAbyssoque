@@ -40,17 +40,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      queryNav: "",
+    };
+  },
   methods: {
     onSearchSubmit() {
       this.$store.commit("SET_QUERY", this.queryNav);
       this.queryNav = "";
       this.$router.push({ path: "/search" });
     },
-  },
-  data() {
-    return {
-      queryNav: "",
-    };
   },
   computed: {
     loginStatus() {

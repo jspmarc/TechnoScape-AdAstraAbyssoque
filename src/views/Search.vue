@@ -5,11 +5,14 @@
       <input
         type="text"
         class="search-input"
+        ref="search"
         placeholder="Search your vacation ..."
         v-model="inputQuery"
         v-on:keyup.enter="onSearchSubmit"
       />
-      <p v-if="query">Showing results for: "{{ query }}"</p>
+      <p v-if="query">
+        Showing results for: "<span style="color:#C22929">{{ query }} </span>"
+      </p>
     </div>
     <div class="result-list">
       <ResultList />
@@ -36,6 +39,12 @@ export default {
       this.$store.commit("SET_QUERY", this.inputQuery);
       this.$store.commit("SET_QUERYNAV", "");
     },
+    setFocus() {
+      this.$refs.search.focus();
+    },
+  },
+  mounted() {
+    this.setFocus();
   },
   components: {
     ResultList,
