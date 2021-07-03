@@ -2,39 +2,46 @@
   <div class="all">
     <div class="title">
       <h1 class="main">
-        Which atmosphere do you like the most?
+        {{getQuestions()}}
       </h1>
       <p class="sub">
         (choose one picture)
       </p>
     </div>
-    <ul class="jawaban">
-      <li>
-        <img
-          src="https://lh3.googleusercontent.com/proxy/E0QD2benripPpMCA2mwnK-BuuIzW833YponRCeOAFm_zL9FIwjZ1-U48Etv1OLNw10pqGqmS83VP3FfeyKB-v7aX6vOGW61JpgyoZN0B780y79vHpFviePpBh8G-BVSohHRhYfdA"
-          alt="" />
-      </li>
-      <li>
-        <img
-          src="https://www.rentalmobilbali.net/wp-content/uploads/2011/12/Pantai-Pasir-Putih-Di-Bali-1.jpg"
-          alt="" />
-      </li>
-      <li>
-        <img
-          src="https://cdn.idntimes.com/content-images/post/20190917/vila-di-gunung-agung-e0a8b5ac05f947ac90756c8f4f4de793_600x400.jpg"
-          alt="" />
-      </li>
-      <li>
-        <img
-          src="https://www.goodnewsfromindonesia.id/uploads/post/large-mobillombokdotcom-7de3a7e162c38929f23c9491ead3e3c8.jpg"
-          alt="" />
+    <ul class="answers">
+      <li v-for="(item, index) in getChoices()" :key="index">
+        <img :src="item.link" :alt="item.type" @click="onClick(item.type)">
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {}
+import data from '../../data/recommendationTest.json';
+
+export default {
+  data() {
+    return {
+      recAns: this.$store.state.recAns,
+    }
+  },
+  methods: {
+    onClick(answer) {
+      this.recAns.push(answer);
+      const limit = data.length;
+
+      if (this.recAns.length >= limit) {
+        this.recAns.length = 0;
+      }
+    },
+    getQuestions() {
+      return data[this.recAns.length].question;
+    },
+    getChoices() {
+      return data[this.recAns.length].choices;
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -48,7 +55,7 @@ export default {}
     margin-bottom: 5rem;
 
     .main {
-      font-size: 48px;
+      font-size: 36px;
       text-align: center;
     }
     .sub {
@@ -57,7 +64,7 @@ export default {}
     }
   }
 
-  .jawaban {
+  .answers {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -65,16 +72,16 @@ export default {}
     align-items: center;
 
     width: 50vw;
-    height: 73vh;
+    height: 70vh;
 
     li {
-      width: 400px;
-      height: 300px;
-      margin: 0 0 3rem 0;
+      width: 20vw;
+      height: 30vh;
+      margin: 0 0 1rem 0;
 
       img {
-        width: 400px;
-        height: 300px;
+        width: 20vw;
+        height: 30vh;
         object-fit: cover;
       }
     }

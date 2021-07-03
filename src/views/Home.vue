@@ -1,6 +1,8 @@
 <template>
-  <Jumbotron/>
-  <RecommendationTest/>
+  <div>
+    <Jumbotron/>
+    <RecommendationTest />
+  </div>
 </template>
 
 <script>

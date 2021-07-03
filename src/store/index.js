@@ -5,6 +5,7 @@ const store = createStore({
   state() {
     return {
       number: 1,
+      recAns: [],
     };
   },
   actions: {},
