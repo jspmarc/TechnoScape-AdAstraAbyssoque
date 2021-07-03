@@ -1,15 +1,15 @@
 <template>
   <div class="nav px-20 py-8">
     <div class="nav-left">
-      <div class="nav-link">
+      <div class="nav-link mr-10 font-bold">
         ICON
       </div>
-      <router-link class="nav-link" to="/">HOME</router-link>
-      <router-link class="nav-link" to="/">PAGE #</router-link>
-      <router-link class="nav-link" to="/">PAGE #</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">HOME</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
     </div>
     <div class="nav-right">
-      <div class="search-box">
+      <div class="search-box mr-5">
         <font-awesome-icon icon="search" class="icon" />
         <input
           type="text"
@@ -17,6 +17,11 @@
           placeholder="Search your vacation ..."
         />
       </div>
+      <button class="text-only-button mr-5">
+        <router-link to="/Signup" class="text-only-button-link font-bold">
+          LOG IN
+        </router-link>
+      </button>
       <button class="button">
         <router-link to="/signup" class="button-link">
           SIGN UP
@@ -51,6 +56,11 @@ export default {
   display: flex;
 }
 
+.text-only-button-link {
+  text-decoration: none;
+  color: #2759aa;
+}
+
 .button-link {
   text-decoration: none;
   color: #fcfeff;
@@ -59,7 +69,6 @@ export default {
 .nav-link {
   text-decoration: none;
   color: #171123;
-  margin-right: 40px;
 }
 
 .search-box {
@@ -89,6 +98,10 @@ export default {
   color: #8cb9fd;
 }
 
+.text-only-button {
+  color: #2759aa;
+}
+
 .button {
   color: white;
   background: #2759aa;
@@ -96,7 +109,6 @@ export default {
   border: none;
   border-radius: 5px;
   white-space: nowrap;
-  margin-left: 15px;
 }
 
 input {
