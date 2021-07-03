@@ -1,5 +1,5 @@
 <template>
-  <div class="nav">
+  <div class="nav px-20 py-8">
     <div class="nav-left">
       <div class="nav-link">
         ICON
@@ -37,7 +37,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
 }
 
 .nav-left {

@@ -1,19 +1,13 @@
 <template>
-  <h1>Home Page {{ this.number }}</h1>
-  <p @click="onClick">Click</p>
+  <Jumbotron/>
 </template>
 
 <script>
+import Jumbotron from "../components/Home/Jumbotron.vue";
+
 export default {
-  methods: {
-    onClick() {
-      this.$store.commit("increment");
-    },
-  },
-  computed: {
-    number() {
-      return this.$store.state.number;
-    },
+  components: {
+    Jumbotron,
   },
 };
 </script>
