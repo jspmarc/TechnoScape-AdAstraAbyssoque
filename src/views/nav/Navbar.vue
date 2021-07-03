@@ -1,12 +1,17 @@
 <template>
   <div class="nav px-20 py-8">
-    <div class="nav-left">
+    <div class="nav-left flex items-center">
       <div class="nav-link mr-10 font-bold">
-        ICON
+        <img class="logo" src="../../assets/logo.svg" />
       </div>
       <router-link class="nav-link mr-10 font-bold" to="/">HOME</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">EXPLORE</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">
+        MY ORDER
+      </router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">
+        PROMOTION
+      </router-link>
     </div>
     <div class="nav-right">
       <div class="search-box mr-5">
@@ -50,6 +55,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
 }
 
 .nav-left {
