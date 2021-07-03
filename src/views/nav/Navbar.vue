@@ -20,6 +20,8 @@
           type="text"
           class="search-input"
           placeholder="Search your vacation ..."
+          v-model="queryNav"
+          v-on:keyup.enter="onSearchSubmit"
         />
       </div>
       <button class="text-only-button mr-5" v-if="!loginStatus">
@@ -38,6 +40,18 @@
 
 <script>
 export default {
+  methods: {
+    onSearchSubmit() {
+      this.$store.commit("SET_QUERY", this.queryNav);
+      this.queryNav = "";
+      this.$router.push({ path: "/search" });
+    },
+  },
+  data() {
+    return {
+      queryNav: "",
+    };
+  },
   computed: {
     loginStatus() {
       return this.$store.state.login;
