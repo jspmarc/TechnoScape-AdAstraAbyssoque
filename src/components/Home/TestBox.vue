@@ -1,72 +1,69 @@
 <template>
-    <div class="test-box-container p-20">
-        <p class="text-3xl mb-4 font-bold text-center text-white">Where do you want to stay?</p>
-        <div class="flex flex-row justify-center items-center mb-16">
-            <p class="mr-3 text-white text-xl">Don’t know where to stay?</p>
-            <button class="ml-3 text-white bg-white button p-2 rounded-3xl px-4 text-xl">Take this test to find out!</button>
-        </div>
-        <div class="flex flex-col justify-center bg-white rounded-2xl p-20">
-            <p class="text-xl">Destination</p>
-            <div class="search-box flex items-center">
-                <font-awesome-icon icon="map-marker-alt" class="icon" />
-                <input
-                    type="text"
-                    class="search-input"
-                    placeholder="Search your vacation ..."
-                />
-            </div>
-            <div class="grid grid-cols-3 gap-8 my-8">
-                <div>
-                    <p class="text-xl">Check-in</p>
-                    <div class="search-box flex items-center">
-                        <font-awesome-icon icon="calendar" class="icon" />
-                        <input
-                            type="text"
-                            class="search-input"
-                            placeholder="Search your vacation ..."
-                        />
-                    </div>
-                </div>
-                <div>
-                    <p class="text-xl">Duration</p>
-                    <div class="search-box flex items-center">
-                        <font-awesome-icon icon="moon" class="icon" />
-                        <select class="search-input-select w-full ml-1">
-                            <option>1 night</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                    <p class="text-xl">Check-out</p>
-                    <div class="search-box flex items-center">
-                        <font-awesome-icon icon="calendar" class="icon" />
-                        <input
-                            type="text"
-                            class="search-input"
-                            placeholder="Search your vacation ..."
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-3 gap-8 items-end">
-                <div>
-                    <p class="text-xl">Guests and Rooms</p>
-                    <div class="search-box flex items-center justify-between">
-                        <font-awesome-icon icon="person-booth" class="icon" />
-                        <select class="search-input-select w-full ml-1">
-                            <option>1 night</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                    
-                </div>
-                <div class="flex flex-col">
-                    <button class="button-blue p-2 rounded-3xl">SEARCH</button>
-                </div>
-            </div>
-        </div>
+  <div class="test-box-container p-20">
+    <p class="text-3xl mb-4 font-bold text-center text-white">Where do you want to stay?</p>
+    <div class="flex flex-row justify-center items-center mb-16">
+      <p class="mr-3 text-white text-xl">Don’t know where to stay?</p>
+      <button class="ml-3 text-white bg-white button p-2 rounded-3xl px-4 text-xl">Take this test to find out!</button>
     </div>
+    <div class="flex flex-col justify-center bg-white rounded-2xl p-20">
+      <p class="text-xl">Destination</p>
+      <div class="search-box flex items-center">
+        <font-awesome-icon icon="map-marker-alt" class="icon" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search your vacation ..."
+        />
+      </div>
+      <div class="grid grid-cols-3 gap-8 my-8">
+          <div>
+            <p class="text-xl">Check-in</p>
+            <div class="search-box flex items-center">
+              <font-awesome-icon icon="calendar" class="icon" />
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search your vacation ..."
+              />
+            </div>
+          </div>
+          <div>
+            <p class="text-xl">Duration</p>
+            <div class="search-box flex items-center">
+              <font-awesome-icon icon="moon" class="icon" />
+              <select class="search-input-select w-full ml-1">
+                <option>1 night</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <p class="text-xl">Check-out</p>
+            <div class="search-box flex items-center">
+              <font-awesome-icon icon="calendar" class="icon" />
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search your vacation ..."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-8 items-end">
+          <div>
+              <p class="text-xl">Guests and Rooms</p>
+              <div class="search-box flex items-center justify-between">
+                <font-awesome-icon icon="person-booth" class="icon" />
+                <select class="search-input-select w-full ml-1">
+                  <option>1 night</option>
+                </select>
+              </div>
+          </div>
+          <div class="flex flex-col">
+            <button class="button-blue p-2 rounded-3xl">SEARCH</button>
+          </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -94,7 +91,7 @@ export default {};
 
 .search-input-select {
   background: transparent;
-  border: none; 
+  border: none;
 }
 
 .search-input::placeholder {
