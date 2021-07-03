@@ -22,6 +22,9 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-position: 0px -350px;
+  background-image: url("../../assets/jumbotron.png");
+  background-size: 100% auto;
 
   h1 {
     letter-spacing: 5px;
