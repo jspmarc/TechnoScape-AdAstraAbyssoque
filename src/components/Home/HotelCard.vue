@@ -45,10 +45,6 @@ export default {};
     background: #9B9B9B;
 }
 
-.icon {
-    
-}
-
 .letter-spacing {
     letter-spacing: 4px;
 }

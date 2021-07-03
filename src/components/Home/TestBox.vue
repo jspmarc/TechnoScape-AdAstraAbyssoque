@@ -20,21 +20,45 @@
           <div>
             <p class="text-xl">Check-in</p>
             <div class="search-box flex items-center">
-              <font-awesome-icon icon="calendar" class="icon" />
-              <input
-                type="text"
-                class="search-input"
-                placeholder="Search your vacation ..."
-              />
+                <font-awesome-icon icon="map-marker-alt" class="icon" />
+                <input
+                    type="text"
+                    class="search-input w-full"
+                    placeholder="Your next stay..."
+                />
             </div>
-          </div>
-          <div>
-            <p class="text-xl">Duration</p>
-            <div class="search-box flex items-center">
-              <font-awesome-icon icon="moon" class="icon" />
-              <select class="search-input-select w-full ml-1">
-                <option>1 night</option>
-              </select>
+            <div class="grid grid-cols-3 gap-8 my-8">
+                <div>
+                    <p class="text-xl">Check-in</p>
+                    <div class="search-box flex items-center">
+                        <font-awesome-icon icon="calendar" class="icon" />
+                        <input
+                            type="text"
+                            class="search-input w-full"
+                            placeholder="Insert your check-in date ..."
+                        />
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xl">Duration</p>
+                    <div class="search-box flex items-center">
+                        <font-awesome-icon icon="moon" class="icon" />
+                        <select class="search-input-select w-full ml-1">
+                            <option>1 night</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-xl">Check-out</p>
+                    <div class="search-box flex items-center">
+                        <font-awesome-icon icon="calendar" class="icon w-full" />
+                        <input
+                            type="text"
+                            class="search-input w-full"
+                            placeholder="Insert your check-out date ..."
+                        />
+                    </div>
+                </div>
             </div>
           </div>
           <div>
