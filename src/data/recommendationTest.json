@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Which atmosphere do you like the most?",
+    "choices": [
+      {
+        "link": "https://www.99.co/blog/indonesia/wp-content/uploads/2021/02/indonesiaexpatbiz.jpg",
+        "type": "metropolitan"
+      },
+      {
+        "link": "https://www.rentalmobilbali.net/wp-content/uploads/2011/12/Pantai-Pasir-Putih-Di-Bali-1.jpg",
+        "type": "beach"
+      },
+      {
+        "link": "https://cdn.idntimes.com/content-images/post/20190917/vila-di-gunung-agung-e0a8b5ac05f947ac90756c8f4f4de793_600x400.jpg",
+        "type": "mountains"
+      },
+      {
+        "link": "https://www.goodnewsfromindonesia.id/uploads/post/large-mobillombokdotcom-7de3a7e162c38929f23c9491ead3e3c8.jpg",
+        "type": "forest"
+      }
+    ]
+  },
+  {
+    "question": "Which fancies you?",
+    "choices": [
+      {
+        "link": "https://cdn.idntimes.com/content-images/community/2018/10/42ae6d70605ed5324e6dba0e3ebee8fe-e8d2408250e33a25018b0a75fab01731.jpg",
+        "type": "glamping"
+      },
+      {
+        "link": "https://origin.pegipegi.com/jalan/images/pict2L/Y4/Y991284/Y991284022.jpg",
+        "type": "villa"
+      },
+      {
+        "link": "https://cdn.idntimes.com/content-images/community/2020/02/y900374022-03523c01699203b1b576f97c1dd1c4fc_600x400.jpg",
+        "type": "cottage"
+      },
+      {
+        "link": "https://medialibrarycdn.entrata.com//media_library/1715/5dde8ea8e02a07.07327544849.jpg",
+        "type": "apartment"
+      }
+    ]
+  }
+]

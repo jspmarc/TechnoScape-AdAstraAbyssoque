@@ -12,6 +12,7 @@ const store = createStore({
       number: 1,
       queryNav: "",
       query: "",
+      recAns: [],
     };
   },
   actions: {},
