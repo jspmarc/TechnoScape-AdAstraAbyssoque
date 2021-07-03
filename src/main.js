@@ -5,7 +5,7 @@ import router from "./router";
 import { createApp } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import './App.css';
+import './index.css';
 
 library.add(faSearch);
 
@@ -15,6 +15,6 @@ app.use(router);
 
 app.config.globalProperties.$store = store;
 
-app.component('font-awesome-icon', FontAwesomeIcon);
+app.component("font-awesome-icon", FontAwesomeIcon);
 
 app.mount("#app");
