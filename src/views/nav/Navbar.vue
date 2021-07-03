@@ -10,14 +10,14 @@
     </div>
     <div class="nav-right">
       <div class="search-box">
-        <font-awesome-icon icon="search" />
-        <input
-          type="text"
-          class="search-input"
-          placeholder="Search your vacation ..."
-        />
+        <font-awesome-icon icon="search" class="icon"/>
+        <input type="text" class="search-input" placeholder="Search your vacation ...">
       </div>
-      <button class="button">SIGN UP</button>
+      <button class="button">
+        <router-link to="/Signup" class="button-link">
+          SIGN UP
+        </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -48,19 +48,28 @@ export default {
   display: flex;
 }
 
+.button-link {
+  text-decoration: none;
+  color: #FCFEFF;
+}
+
 .nav-link {
   text-decoration: none;
-  color: black;
+  color: #171123;
   margin-right: 40px;
 }
 
 .search-box {
-  background: #e5f1ff;
+  background: #E5F1FF;
   display: flex;
   align-items: center;
   padding: 0 10px;
-  color: #8cb9fd;
+  color: #8CB9FD;
   border-radius: 5px;
+}
+
+.icon:hover {
+  cursor: pointer;
 }
 
 .search-input {
@@ -70,16 +79,21 @@ export default {
 }
 
 .search-input::placeholder {
-  color: #8cb9fd;
+  color: #8CB9FD;
 }
 
 .button {
   color: white;
-  background: #2759aa;
+  background: #2759AA;
   padding: 6px 15px;
   border: none;
   border-radius: 5px;
   white-space: nowrap;
   margin-left: 15px;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+  color: #171123;
 }
 </style>
