@@ -14,16 +14,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .signup-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0% 10% 0% 3%;
-}
 
-.signup-box > img {
-  width: 800px;
-  height: 700px;
+  img {
+    width: 800px;
+    height: 700px;
+  }
 }
 </style>

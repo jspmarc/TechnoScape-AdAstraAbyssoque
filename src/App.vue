@@ -23,7 +23,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+/* @import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&subset=latin-ext"); */
+
 body {
   margin: 0;
 }
