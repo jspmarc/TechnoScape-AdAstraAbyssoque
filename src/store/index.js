@@ -10,12 +10,20 @@ const store = createStore({
       },
       login: false,
       number: 1,
+      queryNav: "",
+      query: "",
     };
   },
   actions: {},
   mutations: {
     increment(state) {
       state.number += 1;
+    },
+    SET_QUERY(state, val) {
+      state.query = val;
+    },
+    SET_QUERYNAV(state, val) {
+      state.queryNav = val;
     },
   },
   getters: {},
