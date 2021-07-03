@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Pacific Villa",
+    "star": "4",
+    "price": "799.999",
+    "badge1": "Villa",
+    "badge2": "Negotiable",
+    "location": "Thamrin, Jakarta",
+    "rating": "8.9",
+    "numReview": "3.442",
+    "covid": "5",
+    "image": "jumbotron.png"
+  },
+  {
+    "name": "Mariott Apartment",
+    "star": "5",
+    "price": "999.999",
+    "badge1": "Apartment",
+    "badge2": "",
+    "location": "Mega Kuningan, Jakarta",
+    "rating": "9.5",
+    "numReview": "10.342",
+    "covid": "5",
+    "image": "jumbotron.png"
+  }
+]
