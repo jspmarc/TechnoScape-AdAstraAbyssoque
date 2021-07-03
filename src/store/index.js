@@ -4,6 +4,11 @@ import { createStore } from "vuex";
 const store = createStore({
   state() {
     return {
+      user: {
+        name: "John Doe",
+        email: "john.doe@gmail.com",
+      },
+      login: false,
       number: 1,
       recAns: [],
     };

@@ -1,25 +1,34 @@
 <template>
   <div class="nav px-20 py-8">
-    <div class="nav-left">
+    <div class="nav-left flex items-center">
       <div class="nav-link mr-10 font-bold">
-        ICON
+        <img class="logo" src="../../assets/logo.svg" />
       </div>
       <router-link class="nav-link mr-10 font-bold" to="/">HOME</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">PAGE #</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">EXPLORE</router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">
+        MY ORDER
+      </router-link>
+      <router-link class="nav-link mr-10 font-bold" to="/">
+        PROMOTION
+      </router-link>
     </div>
     <div class="nav-right">
       <div class="search-box mr-5">
-        <font-awesome-icon icon="search" class="icon"/>
-        <input type="text" class="search-input" placeholder="Search your vacation ...">
+        <font-awesome-icon icon="search" class="icon" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search your vacation ..."
+        />
       </div>
-      <button class="text-only-button mr-5">
-        <router-link to="/Signup" class="text-only-button-link font-bold">
+      <button class="text-only-button mr-5" v-if="!loginStatus">
+        <router-link to="/signup" class="text-only-button-link font-bold">
           LOG IN
         </router-link>
       </button>
-      <button class="button">
-        <router-link to="/Signup" class="button-link">
+      <button class="button" v-if="!loginStatus">
+        <router-link to="/signup" class="button-link">
           SIGN UP
         </router-link>
       </button>
@@ -29,7 +38,11 @@
 
 <script>
 export default {
-  name: "Navbar",
+  computed: {
+    loginStatus() {
+      return this.$store.state.login;
+    },
+  },
 };
 </script>
 
@@ -44,6 +57,11 @@ export default {
   align-items: center;
 }
 
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
 .nav-left {
   display: flex;
 }
@@ -54,12 +72,12 @@ export default {
 
 .text-only-button-link {
   text-decoration: none;
-  color: #2759AA;
+  color: #2759aa;
 }
 
 .button-link {
   text-decoration: none;
-  color: #FCFEFF;
+  color: #fcfeff;
 }
 
 .nav-link {
@@ -68,12 +86,17 @@ export default {
 }
 
 .search-box {
-  background: #E5F1FF;
+  background: #e5f1ff;
   display: flex;
   align-items: center;
   padding: 0 10px;
-  color: #8CB9FD;
+  color: #8cb9fd;
   border-radius: 5px;
+  height: 38px;
+}
+
+.icon {
+  margin-right: 10px;
 }
 
 .icon:hover {
@@ -87,23 +110,35 @@ export default {
 }
 
 .search-input::placeholder {
-  color: #8CB9FD;
+  color: #8cb9fd;
 }
 
 .text-only-button {
-  color: #2759AA;
+  color: #2759aa;
 }
 
 .button {
   color: white;
-  background: #2759AA;
+  background: #2759aa;
   padding: 6px 15px;
   border: none;
   border-radius: 5px;
   white-space: nowrap;
 }
 
-input:focus, textarea:focus, select:focus{
+input {
+  width: 190px;
+  transition-duration: 0.5s;
+}
+
+input:focus {
+  width: 360px;
+  transition-duration: 0.5s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   color: #171123;
 }
