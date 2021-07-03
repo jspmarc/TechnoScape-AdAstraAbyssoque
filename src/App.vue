@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <Navbar></Navbar>
-    <router-view />
-  </div>
+  <Navbar></Navbar>
+  <router-view v-slot="{ Component }">
+    <transition name="route" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -25,6 +27,23 @@ export default {
 
 <style lang="scss">
 /* @import url("https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&subset=latin-ext"); */
+
+/* route transition */
+.route-enter-from {
+  opacity: 0;
+}
+
+.route-enter-active {
+  transition: all 0.12s ease-out;
+}
+
+.route-leave-to {
+  opacity: 0;
+}
+
+.route-leave-active {
+  transition: all 0.12s ease-in;
+}
 
 body {
   margin: 0;

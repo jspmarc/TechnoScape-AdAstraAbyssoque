@@ -17,12 +17,12 @@
           placeholder="Search your vacation ..."
         />
       </div>
-      <button class="text-only-button mr-5">
-        <router-link to="/Signup" class="text-only-button-link font-bold">
+      <button class="text-only-button mr-5" v-if="!loginStatus">
+        <router-link to="/signup" class="text-only-button-link font-bold">
           LOG IN
         </router-link>
       </button>
-      <button class="button">
+      <button class="button" v-if="!loginStatus">
         <router-link to="/signup" class="button-link">
           SIGN UP
         </router-link>
@@ -33,7 +33,11 @@
 
 <script>
 export default {
-  name: "Navbar",
+  computed: {
+    loginStatus() {
+      return this.$store.state.login;
+    },
+  },
 };
 </script>
 
@@ -78,6 +82,7 @@ export default {
   padding: 0 10px;
   color: #8cb9fd;
   border-radius: 5px;
+  height: 38px;
 }
 
 .icon {

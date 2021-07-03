@@ -15,13 +15,13 @@
       <hr />
     </div>
     <div class="auth">
-      <button class="google">
+      <button class="google" @click="onSignUpClick">
         <img src="../../assets/signup-google.png" />Sign up with Google
       </button>
-      <button class="facebook">
+      <button class="facebook" @click="onSignUpClick">
         <img src="../../assets/signup-facebook.png" />Sign up with Facebook
       </button>
-      <button class="twitter">
+      <button class="twitter" @click="onSignUpClick">
         <img src="../../assets/signup-twitter.png" />Sign up with Twitter
       </button>
     </div>
@@ -29,7 +29,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    onSignUpClick() {
+      this.$store.state.login = true;
+      this.$router.push({ path: "/" });
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
