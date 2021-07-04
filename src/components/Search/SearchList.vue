@@ -4,6 +4,10 @@
       Showing results for: "<span style="color:#C22929">{{ query }}</span
       >"
     </p>
+    <p v-if="recommend && recommendStatus">
+      Here are some accomodations based on
+      <span style="color:#C22929">your preferences</span>.
+    </p>
     <div
       class="item-container"
       v-for="(item, index) in searchResult"
@@ -30,6 +34,20 @@ import SearchItem from "./SearchItem";
 import data from "../../data/searchResult.json";
 
 export default {
+  props: {
+    recommendStatus: Boolean,
+  },
+  data() {
+    return {
+      recommend: false,
+    };
+  },
+  methods: {
+    onMount() {
+      if (this.$store.state.recommend) this.recommend = true;
+      this.$store.state.recommend = false;
+    },
+  },
   computed: {
     query() {
       return this.$store.state.query || this.$store.state.queryNav;
@@ -37,6 +55,9 @@ export default {
     searchResult() {
       return data;
     },
+  },
+  mounted() {
+    this.onMount();
   },
   components: {
     SearchItem,

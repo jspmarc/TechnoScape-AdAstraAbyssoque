@@ -5,7 +5,7 @@
         <img class="logo" src="../../assets/logo.svg" />
       </router-link>
       <router-link class="nav-link mr-10" to="/">HOME</router-link>
-      <router-link class="nav-link mr-10" to="/">EXPLORE</router-link>
+      <router-link class="nav-link mr-10" to="/search">EXPLORE</router-link>
       <router-link class="nav-link mr-10" to="/">
         MY ORDER
       </router-link>

@@ -3,10 +3,9 @@
     <p class="text-6xl mb-2 font-bold">Mlaku</p>
     <p class="text-3xl mb-4 inter">Your staycation, your price.</p>
     <p class="w-1/2 text-xl">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
+      A groundbreaking web app providing access for renters to discover and
+      purchase a wide range of negotiable non-hotel accommodation based on their
+      personal preferences
     </p>
   </div>
 </template>
