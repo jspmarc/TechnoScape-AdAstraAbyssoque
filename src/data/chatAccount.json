@@ -1,0 +1,33 @@
+[
+    {
+      "name": "Deemas G.",
+      "time": "12:43",
+      "last_chat": "Lorem ipsum dolor sit amet, consectur bla blabla ...",
+      "is_selected": false
+    },
+    {
+      "name": "Jono Do",
+      "time": "12:43",
+      "last_chat": "Lorem ipsum dolor sit amet, consectur bla blabla ...",
+      "is_selected": true
+    },
+    {
+      "name": "Hion Dermansyah",
+      "time": "12:43",
+      "last_chat": "Lorem ipsum dolor sit amet, consectur bla blabla ...",
+      "is_selected": false
+    },
+    {
+      "name": "Meane Jikha",
+      "time": "12:43",
+      "last_chat": "Lorem ipsum dolor sit amet, consectur bla blabla ...",
+      "is_selected": false
+    },
+    {
+      "name": "Mosep Jarcello",
+      "time": "12:43",
+      "last_chat": "Lorem ipsum dolor sit amet, consectur bla blabla ...",
+      "is_selected": false
+    }
+]
+  

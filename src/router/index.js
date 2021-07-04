@@ -4,6 +4,7 @@ import Detail from "../views/Detail.vue";
 import Home from "../views/Home.vue";
 import Signup from "../views/Signup.vue";
 import Search from "../views/Search.vue";
+import Chat from "../views/Chat.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/detail",
     name: "Detail",
     component: Detail,
+  },
+  {
+    path: "/chat",
+    name: "Chat",
+    component: Chat,
   },
 ];
 
