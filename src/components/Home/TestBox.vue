@@ -1,11 +1,13 @@
 <template>
   <div class="test-box-container p-20">
-    <p class="text-3xl mb-4 font-bold text-center text-white">Where do you want to stay?</p>
-    <div class="flex flex-row justify-center items-center mb-16">
-      <p class="mr-3 text-white text-xl">Don’t know where to stay?</p>
-      <button class="ml-3 text-white bg-white button p-2 rounded-3xl px-4 text-xl" @click="showModal = true">Take this test to find out!</button>
+    <div class="title-container">
+        <p class="text-3xl mb-4 font-bold text-center text-white inter-bold">Where do you want to stay?</p>
+        <div class="flex flex-row justify-center items-center mb-16">
+            <p class="mr-3 text-white text-xl">Don’t know where to stay?</p>
+            <button class="ml-3 text-white bg-white button p-2 rounded-3xl px-4 text-xl inter" @click="showModal = true">Take this test to find out!</button>
+        </div>
+        <RecommendationTest v-if="showModal" @close="showModal = false" />
     </div>
-    <RecommendationTest v-if="showModal" @close="showModal = false" />
     <div class="flex flex-col justify-center bg-white rounded-2xl p-20">
         <p class="text-xl">Destination</p>
         <div class="search-box px-3 flex items-center rounded-lg">
@@ -86,7 +88,7 @@
             </div>
           <div/>
           <div class="flex flex-col">
-            <button class="button-blue p-2 rounded-3xl">SEARCH</button>
+            <button class="button-blue p-2 rounded-3xl inter">SEARCH</button>
           </div>
         </div>
     </div>
@@ -129,9 +131,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .test-box-container {
     background-image: linear-gradient(#2759AA, #2759AA, #FCFEFF);
+    .title-container {
+        height: 24vh;
+    }
 }
 
 .search-box {

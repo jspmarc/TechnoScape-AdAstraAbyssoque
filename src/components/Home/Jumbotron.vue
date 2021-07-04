@@ -1,7 +1,7 @@
 <template>
   <div class="jumbo-container p-20">
     <p class="text-6xl mb-2 font-bold">Mlaku</p>
-    <p class="text-3xl mb-4">Your staycation, your price.</p>
+    <p class="text-3xl mb-4 inter">Your staycation, your price.</p>
     <p class="w-1/2 text-xl">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -18,7 +18,7 @@ export default {};
 <style scoped lang="scss">
 .jumbo-container {
   background: #b5b5b5;
-  height: 500px;
+  height: 62vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

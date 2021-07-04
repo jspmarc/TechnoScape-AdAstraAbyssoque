@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Nunito&display=swap");
 
+/* fonts */
+
 html,
 body {
   font-family: "Nunito", sans-serif;
@@ -35,6 +37,28 @@ h3 {
   font-size: 30px;
 }
 
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+/* *** scrollbar *** */
+
+:root {
+  --scroll-thumb: #053267;
+  --scroll-bg: #C7E0FF;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -42,11 +66,20 @@ h3 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--scroll-bg);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--scroll-thumb);
   border-radius: 10px;
+}
+
+/* Mozilla */
+html,
+body {
+  /* width* */
+  scrollbar-width: thin;
+  /* track and handle */
+  scrollbar-color: var(--scroll-thumb) var(--scroll-bg);
 }
