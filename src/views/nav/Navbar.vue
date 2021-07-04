@@ -6,7 +6,7 @@
       </router-link>
       <router-link class="nav-link mr-10" to="/">HOME</router-link>
       <router-link class="nav-link mr-10" to="/search">EXPLORE</router-link>
-      <router-link class="nav-link mr-10" to="/">
+      <router-link class="nav-link mr-10" to="/order">
         MY ORDER
       </router-link>
       <router-link class="nav-link mr-10" to="/">

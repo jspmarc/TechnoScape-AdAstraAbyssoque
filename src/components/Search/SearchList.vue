@@ -64,7 +64,6 @@
         :numReview="item.numReview"
         :covid="item.covid"
         :image="item.image"
-        @click="goDetail"
       />
     </div>
   </div>
@@ -92,9 +91,6 @@ export default {
     searchResult() {
       return this.recommend ? dataRec : data;
     },
-    goDetail() {
-      this.$router.push({ path: "/detail" });
-    },
   },
   computed: {
     query() {
@@ -117,7 +113,6 @@ export default {
   .item-container {
     width: 100%;
     margin: 20px 0;
-    cursor: pointer;
   }
 }
 

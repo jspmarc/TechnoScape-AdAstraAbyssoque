@@ -7,6 +7,7 @@ import Search from "../views/Search.vue";
 import Checkout from "../views/Checkout.vue";
 import Negotiation from "../views/Negotiation.vue";
 import Chat from "../views/Chat.vue";
+import Order from "../views/Order.vue";
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: "/chat",
     name: "Chat",
     component: Chat,
+  },
+  {
+    path: "/order",
+    name: "Order",
+    component: Order,
   },
 ];
 
