@@ -85,6 +85,7 @@ export default {
         width: 20vw;
         height: 30vh;
         object-fit: cover;
+        cursor: pointer;
       }
     }
   }
