@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Meane Jikha",
+        "stars": 5,
+        "comment": "the place is Ok, good view especially at the 1st floor. need to make sure you bring your own cutlery, include mat, and reconfirm about them to provide soap, trash bin plastic, etc. ..."
+    },
+    {
+        "name": "Jarcello Mosep",
+        "stars": 4.5,
+        "comment": "the place is Ok, good view especially at the 1st floor."
+    },
+    {
+        "name": "Deemas G.",
+        "stars": 3,
+        "comment": "Very good place to stay"
+    },
+    {
+        "name": "Meane Jikha",
+        "stars": 2,
+        "comment": "Mauris massa neque, scelerisque a semper id, ultrices et orci. Vivamus eget hendrerit enim. Nam lobortis nisl ac lobortis elementum. Sed consectetur lectus sem, quis lacinia est porta in. "
+    },
+    {
+        "name": "Meane Jikha",
+        "stars": 4,
+        "comment": "Cras laoreet convallis purus quis malesuada. Donec aliquet scelerisque quam vitae bibendum. Donec porta quam et orci ultrices cursus vitae eget elit. Aenean eleifend, velit sed commodo sagittis, ex nisi eleifend dolor, in malesuada dui neque ut purus. Nunc pellentesque non mauris ut tristique. Pellentesque pharetra eu erat eu pellentesque. "
+    },
+    {
+        "name": "Meane Jikha",
+        "stars": 5,
+        "comment": "Proin eu nibh fringilla, imperdiet urna tristique, venenatis purus. Aliquam eget ipsum justo. "
+    }
+]
