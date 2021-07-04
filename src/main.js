@@ -18,8 +18,9 @@ import {
   faMinusCircle,
   faShieldVirus,
   faCommentAlt,
-  faImages,
   faPlus,
+  faCreditCard,
+  faImages,
   faPaperclip,
   faPaperPlane,
   faWifi,
@@ -29,7 +30,7 @@ import {
   faUtensils,
   faBus
 } from "@fortawesome/free-solid-svg-icons";
-import './index.css';
+import "./index.css";
 
 library.add(faSearch);
 library.add(faStar);
@@ -44,6 +45,8 @@ library.add(faPlusCircle);
 library.add(faMinusCircle);
 library.add(faShieldVirus);
 library.add(faCommentAlt);
+library.add(faPlus);
+library.add(faCreditCard);
 library.add(faImages);
 library.add(faPlus);
 library.add(faPaperclip);
