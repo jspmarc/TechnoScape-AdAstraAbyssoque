@@ -30,7 +30,8 @@ import {
   faParking,
   faTv,
   faUtensils,
-  faBus
+  faBus,
+  faShareAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
@@ -61,6 +62,7 @@ library.add(faParking);
 library.add(faTv);
 library.add(faUtensils);
 library.add(faBus);
+library.add(faShareAlt);
 
 const app = createApp(App);
 app.use(store);

@@ -1,5 +1,5 @@
 <template>
-  <div :class="'room-' + hasRoomAvailable + ' mt-8 flex justify-between items-start'">
+  <div :class="'room-' + hasRoomAvailable + ' mt-4 flex justify-between items-start'">
     <div>
       <div class="inter-semi text-xl">
         {{ name }}
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     hasRoomAvailable() {
-      return this.available !== 0;
+      return this.available > 0;
     },
   }
 };
