@@ -55,6 +55,8 @@ export default {
 <style lang="scss" scoped>
 .container {
   background-color: var(--white);
+  width: 80%;
+  margin: auto;
 
   .head {
     flex-direction: row;
@@ -71,6 +73,7 @@ export default {
 
   .csr {
     color: #42E0C9;
+    margin-bottom: 1rem;
 
     span {
       margin-left: 1rem;

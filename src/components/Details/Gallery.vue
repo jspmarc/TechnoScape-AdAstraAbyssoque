@@ -38,6 +38,8 @@ $h: 60vh;
   justify-content: center;
 
   height: $h;
+  width: 80%;
+  margin: auto;
 
   .spotlight {
     width: 50%;
