@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Nunito:wght@400;600;800&display=swap");
 
+:root {
+  --black: #171123;
+  --white: #FCFEFF;
+}
+
 /* fonts */
 
 html,
