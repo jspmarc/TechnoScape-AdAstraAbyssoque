@@ -20,6 +20,10 @@ import {
   faCommentAlt,
   faPlus,
   faCreditCard,
+  faImages,
+  faPlus,
+  faPaperclip,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
@@ -38,6 +42,10 @@ library.add(faShieldVirus);
 library.add(faCommentAlt);
 library.add(faPlus);
 library.add(faCreditCard);
+library.add(faImages);
+library.add(faPlus);
+library.add(faPaperclip);
+library.add(faPaperPlane);
 
 const app = createApp(App);
 app.use(store);

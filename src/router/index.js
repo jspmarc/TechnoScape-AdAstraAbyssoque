@@ -1,10 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
 import About from "../views/About.vue";
+import Detail from "../views/Detail.vue";
+import Home from "../views/Home.vue";
 import Signup from "../views/Signup.vue";
 import Search from "../views/Search.vue";
 import Checkout from "../views/Checkout.vue";
 import Negotiation from "../views/Negotiation.vue";
+import Chat from "../views/Chat.vue";
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
     path: "/negotiation",
     name: "Negotiation",
     component: Negotiation,
+  },
+  {
+    path: "/detail",
+    name: "Detail",
+    component: Detail,
+  },
+  {
+    path: "/chat",
+    name: "Chat",
+    component: Chat,
   },
 ];
 
