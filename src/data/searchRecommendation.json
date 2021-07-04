@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Glamping Looka",
+    "star": "4",
+    "price": "599.999",
+    "badge1": "Glamping",
+    "badge2": "Negotiable",
+    "location": "Mega Kuningan, Jakarta",
+    "rating": "9.4",
+    "numReview": "15.142",
+    "covid": "4",
+    "image": "glamping1.jpg"
+  },
+  {
+    "name": "The Mountain",
+    "star": "4",
+    "price": "799.999",
+    "badge1": "Glamping",
+    "badge2": "",
+    "location": "Menteng, Jakarta",
+    "rating": "9.1",
+    "numReview": "2.142",
+    "covid": "5",
+    "image": "glamping2.jpg"
+  },
+  {
+    "name": "Tenda Kita",
+    "star": "3",
+    "price": "549.999",
+    "badge1": "Glamping",
+    "badge2": "Negotiable",
+    "location": "Palmerah, Jakarta",
+    "rating": "8.7",
+    "numReview": "5.130",
+    "covid": "5",
+    "image": "glamping3.jpeg"
+  },
+  {
+    "name": "Aqua",
+    "star": "4",
+    "price": "719.999",
+    "badge1": "Villa",
+    "badge2": "Negotiable",
+    "location": "Kelapa Gading, Jakarta",
+    "rating": "9.0",
+    "numReview": "2.097",
+    "covid": "5",
+    "image": "villa1.jpg"
+  },
+  {
+    "name": "Green Vill",
+    "star": "4",
+    "price": "600.000",
+    "badge1": "Villa",
+    "badge2": "",
+    "location": "Thamrin, Jakarta",
+    "rating": "8.5",
+    "numReview": "3.984",
+    "covid": "4",
+    "image": "villa2.jpg"
+  }
+]

@@ -5,7 +5,7 @@
         Your Budget
       </h1>
       <p class="sub mt-2">
-        Select your desired budget amount.
+        Select your desired budget amount
       </p>
       <select name="loc" class="select mt-6">
         <option value="jakarta">&lt; Rp200.000</option>
