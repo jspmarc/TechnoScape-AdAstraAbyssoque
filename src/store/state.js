@@ -12,6 +12,7 @@ const defaultState = () => {
     queryNav: "",
     query: "",
     recAns: [],
+    recommend: false,
   };
 };
 

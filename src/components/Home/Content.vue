@@ -2,28 +2,28 @@
   <div class="all">
     <div class="title">
       <h1 class="main">
-        {{getQuestions()}}
+        {{ getQuestions() }}
       </h1>
       <p class="sub">
-        (choose one picture)
+        (Choose one picture)
       </p>
     </div>
     <ul class="answers">
       <li v-for="(item, index) in getChoices()" :key="index">
-        <img :src="item.link" :alt="item.type" @click="onClick(item.type)">
+        <img :src="item.link" :alt="item.type" @click="onClick(item.type)" />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import data from '../../data/recommendationTest.json';
+import data from "../../data/recommendationTest.json";
 
 export default {
   data() {
     return {
       recAns: this.$store.state.recAns,
-    }
+    };
   },
   methods: {
     onClick(answer) {
@@ -31,7 +31,7 @@ export default {
       const limit = data.length;
 
       if (this.recAns.length >= limit) {
-        this.recAns.length = 0;
+        this.$emit("onNext");
       }
     },
     getQuestions() {
@@ -41,7 +41,7 @@ export default {
       return data[this.recAns.length].choices;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

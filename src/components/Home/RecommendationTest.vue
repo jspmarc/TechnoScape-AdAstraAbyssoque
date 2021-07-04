@@ -1,19 +1,21 @@
-
 <template>
   <!-- Source: https://codesandbox.io/s/github/vuejs/vuejs.org/tree/master/src/v2/examples/vue-20-modal-component -->
   <!-- Modal -->
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
-        <div class="modal-container">
-
-          <button class="modal-default-button" @click="$emit('close')">
+        <div
+          class="modal-container"
+          :style="step === 1 ? 'height: 95vh' : 'height: 55vh'"
+        >
+          <button class="modal-default-button" @click="onClose">
             <font-awesome-icon icon="times" />
           </button>
 
           <!-- body -->
-          <Content />
-
+          <Content v-if="step == 1" @onNext="nextPage" />
+          <ContentBudget v-if="step == 2" @onNext="nextPage" />
+          <ContentForm v-if="step == 3" />
         </div>
       </div>
     </div>
@@ -21,13 +23,31 @@
 </template>
 
 <script>
-import Content from './Content.vue';
+import Content from "./Content.vue";
+import ContentForm from "./ContentForm.vue";
+import ContentBudget from "./ContentBudget.vue";
 
 export default {
+  data() {
+    return {
+      step: 1,
+    };
+  },
+  methods: {
+    nextPage() {
+      this.step += 1;
+    },
+    onClose() {
+      this.$store.commit("RESET_RECANS");
+      this.$emit("close");
+    },
+  },
   components: {
     Content,
+    ContentForm,
+    ContentBudget,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -53,11 +73,10 @@ export default {
   flex-direction: column;
 
   width: fit-content;
-  height: 95vh;
   border-radius: 1rem;
   margin: 0 auto;
   padding: 20px 30px;
-  background-color: #FCFEFF;
+  background-color: #fcfeff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
@@ -91,5 +110,4 @@ export default {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
 </style>

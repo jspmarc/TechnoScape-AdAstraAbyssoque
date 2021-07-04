@@ -13,7 +13,7 @@
     </div>
     <div class="search-body">
       <SearchSidebar />
-      <SearchList />
+      <SearchList :recommendStatus="recommendStatus" />
     </div>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
   data() {
     return {
       inputQuery: this.$store.state.query,
+      recommendStatus: true,
     };
   },
   computed: {
@@ -35,6 +36,7 @@ export default {
   },
   methods: {
     onSearchSubmit() {
+      this.recommendStatus = false;
       this.$store.commit("SET_QUERY", this.inputQuery);
       this.$store.commit("SET_QUERYNAV", "");
     },
