@@ -7,7 +7,7 @@
         <input placeholder="Email or Phone Number" />
       </div>
     </div>
-    <button>CONTINUE</button>
+    <button class="inter">CONTINUE</button>
     <p class="link">Already have an account?</p>
     <div class="or">
       <hr />
@@ -15,13 +15,13 @@
       <hr />
     </div>
     <div class="auth">
-      <button class="google" @click="onSignUpClick">
+      <button class="google inter" @click="onSignUpClick">
         <img src="../../assets/signup-google.png" />Sign up with Google
       </button>
-      <button class="facebook" @click="onSignUpClick">
+      <button class="facebook inter" @click="onSignUpClick">
         <img src="../../assets/signup-facebook.png" />Sign up with Facebook
       </button>
-      <button class="twitter" @click="onSignUpClick">
+      <button class="twitter inter" @click="onSignUpClick">
         <img src="../../assets/signup-twitter.png" />Sign up with Twitter
       </button>
     </div>

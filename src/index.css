@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Nunito:wght@400;600;800&display=swap");
 
 /* fonts */
 
@@ -40,6 +40,11 @@ h3 {
 .inter {
   font-family: "Inter", sans-serif;
   font-weight: 400;
+}
+
+.inter-semi {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
 }
 
 .inter-bold {

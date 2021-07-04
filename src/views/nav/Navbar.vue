@@ -1,15 +1,15 @@
 <template>
   <div class="nav px-20 py-8">
-    <div class="nav-left flex items-center">
-      <router-link class="nav-link mr-10 font-bold" to="/">
+    <div class="nav-left flex items-center inter">
+      <router-link class="nav-link mr-10" to="/">
         <img class="logo" src="../../assets/logo.svg" />
       </router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">HOME</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">EXPLORE</router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">
+      <router-link class="nav-link mr-10" to="/">HOME</router-link>
+      <router-link class="nav-link mr-10" to="/">EXPLORE</router-link>
+      <router-link class="nav-link mr-10" to="/">
         MY ORDER
       </router-link>
-      <router-link class="nav-link mr-10 font-bold" to="/">
+      <router-link class="nav-link mr-10" to="/">
         PROMOTION
       </router-link>
     </div>

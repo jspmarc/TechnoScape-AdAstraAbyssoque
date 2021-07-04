@@ -4,14 +4,12 @@
     <div class="info">
       <div class="row justify-between items-center">
         <div class="row-left flex flex-row items-center">
-          <p class="mr-3 text-xl">
-            <strong>{{ name }}</strong>
-          </p>
+          <p class="mr-3 text-xl inter-semi"> {{ name }} </p>
           <ReviewStars :count="parseInt(star)"/>
         </div>
-        <div class="row-right">
+        <div class="row-right inter">
           <p>
-            <strong>Rp {{ price }}</strong> / night
+            <span class="inter-semi">Rp {{ price }}</span> / night
           </p>
         </div>
       </div>
