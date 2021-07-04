@@ -38,8 +38,6 @@ $h: 60vh;
   justify-content: center;
 
   height: $h;
-  width: 80%;
-  margin: auto;
 
   .spotlight {
     width: 50%;
@@ -79,9 +77,11 @@ $h: 60vh;
       .img-3 {
         border-bottom-right-radius: 1rem;
         filter: blur(3px) brightness(0.4);
+        cursor: pointer;
       }
 
       .more-imgs {
+        cursor: pointer;
         position: absolute;
         color: var(--white);
         top: 50%;
