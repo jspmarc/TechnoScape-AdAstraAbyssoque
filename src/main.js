@@ -21,7 +21,6 @@ import {
   faPlus,
   faCreditCard,
   faImages,
-  faPlus,
   faPaperclip,
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
