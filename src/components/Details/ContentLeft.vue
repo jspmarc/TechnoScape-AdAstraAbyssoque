@@ -75,7 +75,7 @@
     </div>
     <div class="mt-2">
       <h1 class="text-3xl font-bold">Location</h1>
-      <img class="mt-3 rounded-xl" src="../../assets/map.jpg" />
+      <img class="mt-3 rounded-xl" src="../../assets/map.png" />
     </div>
   </div>
 </template>
