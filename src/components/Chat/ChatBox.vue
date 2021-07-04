@@ -30,7 +30,7 @@
 import ChatCard from "./ChatCard.vue";
 import data from "../../data/chatHistory.json";
 export default {
-  components: { 
+  components: {
     ChatCard
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
         if(this.chat != "") {
             this.message.push({"chat": this.chat, "time": "12.43", "isSelf": true})
             this.chat = ""
-        }  
+        }
     }
   },
   data() {

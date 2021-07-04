@@ -17,7 +17,7 @@
 <script>
 import ChatBox from "./ChatBox.vue";
 export default {
-  components: { 
+  components: {
     ChatBox
   },
   computed: {

@@ -10,7 +10,7 @@
     </div>
     <ul class="answers">
       <li v-for="(item, index) in getChoices()" :key="index">
-        <img :src="item.link" :alt="item.type" @click="onClick(item.type)" />
+        <img :src="require('../../assets/' + item.link)" :alt="item.type" @click="onClick(item.type)" />
       </li>
     </ul>
   </div>
