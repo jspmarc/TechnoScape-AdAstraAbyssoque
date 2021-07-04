@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$router.push({ path: "/" });
+      this.$router.push({ path: "/order" });
     },
   },
   components: {},

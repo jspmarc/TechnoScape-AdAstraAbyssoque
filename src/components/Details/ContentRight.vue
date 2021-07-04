@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Head :rooms="rooms" />
+    <Head :rooms="rooms" @book="goBook" @nego="goNego" />
     <Foot />
   </div>
 </template>
@@ -13,12 +13,18 @@ export default {
     Head,
     Foot,
   },
+  methods: {
+    goBook() {
+      this.$router.push({ path: "/checkout" });
+    },
+    goNego() {
+      this.$router.push({ path: "/negotiation" });
+    },
+  },
   props: {
     rooms: Array,
   },
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -34,7 +34,16 @@
           SIGN UP
         </router-link>
       </button>
-      <img src="../../assets/john.jpg" v-if="loginStatus" class="ml-10 mr-20" />
+      <div class="cursor-pointer" v-if="loginStatus">
+        <font-awesome-icon
+          class="chat icon icon-qty ml-5 mt-3"
+          icon="comment-alt"
+        />
+        <router-link to="/chat" class="mr-5">
+          CHAT
+        </router-link>
+      </div>
+      <img src="../../assets/john.jpg" v-if="loginStatus" class="ml-5 mr-18" />
     </div>
   </div>
 </template>
