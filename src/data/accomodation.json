@@ -1,0 +1,100 @@
+[
+  {
+    "id": "1",
+    "name": "Pacific Villa",
+    "type": "villa",
+    "atmosphore": "city",
+    "negotiable": true,
+    "location": "Thamrin, Jakarta",
+    "locationLat": -5.136630,
+    "locationLon": 119.409576,
+    "rooms": [
+      {
+        "name": "Economy",
+        "price": "999.999",
+        "available": 20,
+        "bedroom": 1,
+        "person": 1
+      },
+      {
+        "name": "Regular",
+        "price": "1.499.999",
+        "available": 8,
+        "bedroom": 1,
+        "person": 2
+      },
+      {
+        "name": "Deluxe",
+        "price": "1.999.999",
+        "available": 0,
+        "bedroom": 2,
+        "person": 4
+      }
+    ],
+    "reviews" : [
+      {
+        "userID": "1",
+        "rating": 5,
+        "description": "Asik bat cok!",
+        "media": []
+      },
+      {
+        "userID": "2",
+        "rating": 3,
+        "description": "the place is Ok, good view especially at the 1st floor. need to make sure you bring your own cutlery, include mat, and reconfirm about them to provide soap, trash bin plastic, etc. need to improve cleanliness, since some insects there.",
+        "media": [
+          "signup-facebook.png"
+        ]
+      },
+      {
+        "userID": "3",
+        "rating": 4,
+        "description": "👍 okelah",
+        "media": []
+      },
+      {
+        "userID": "4",
+        "rating": 4,
+        "description": "Widih",
+        "media": []
+      }
+    ],
+    "photos": [
+      "https://whatsnewindonesia.com/jakarta/wp-content/uploads/sites/2/2018/11/glamping-around-in-jakarta-1280x720.jpg",
+      "https://cdn.idntimes.com/content-images/community/2018/10/42ae6d70605ed5324e6dba0e3ebee8fe-e8d2408250e33a25018b0a75fab01731.jpg",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png",
+      "jumbotron.png"
+    ],
+    "amenities": {
+      "internet": ["LAN", "wi-fi"],
+      "services": [
+        "24-hour security",
+        "Hot water"
+      ],
+      "publicServices": [
+        "Rumah Sakit Umum Tanah Abang",
+        "Thamrin City"
+      ],
+      "roomFacility": [
+        "TV",
+        "Refrigerator"
+      ],
+      "foodAndBeverages": [
+        "Free breakfast",
+        "McDonald's"
+      ],
+      "publicTransportation": [
+        "Transjakarta",
+        "MRT"
+      ]
+    },
+    "covid": 5
+  }
+]
