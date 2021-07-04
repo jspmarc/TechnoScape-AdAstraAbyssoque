@@ -16,47 +16,27 @@
     <div class="flex mt-5 flex-col items-start">
       <p>Rating</p>
       <div class="flex flex-row items-center my-2">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="star" class="icon-star ml-2" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
+        <input type="radio" id="html" name="fav_language" value="HTML" class="mr-2">
+        <ReviewStars :count="5"/>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="star" class="icon-star ml-2" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
+        <input type="radio" id="html" name="fav_language" value="HTML" class="mr-2">
+        <ReviewStars :count="4"/>
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="star" class="icon-star ml-2" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
+        <input type="radio" id="html" name="fav_language" value="HTML" class="mr-2">
+        <ReviewStars :count="3"/>
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="star" class="icon-star ml-2" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
+        <input type="radio" id="html" name="fav_language" value="HTML" class="mr-2">
+        <ReviewStars :count="2"/>
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="star" class="icon-star ml-2" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
-        <font-awesome-icon icon="star" class="icon-star" />
+        <input type="radio" id="html" name="fav_language" value="HTML" class="mr-2">
+        <ReviewStars :count="1"/>
         <p class="ml-2">and above</p>
       </div>
     </div>
@@ -98,23 +78,11 @@
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
         <input type="radio" id="html" name="fav_language" value="HTML">
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <p class="ml-2">and above</p>
-      </div>
-      <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <p class="ml-2">and above</p>
@@ -123,9 +91,11 @@
         <input type="radio" id="html" name="fav_language" value="HTML">
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
-        <font-awesome-icon icon="shield-virus" class="icon-virus" />
+        <p class="ml-2">and above</p>
+      </div>
+      <div class="flex flex-row items-center my-1">
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-2">
@@ -137,7 +107,12 @@
 </template>
 
 <script>
-export default {};
+import ReviewStars from "../ReviewStars.vue";
+export default {
+  components: {
+    ReviewStars,
+  },
+}
 </script>
 
 <style scoped lang="scss">
