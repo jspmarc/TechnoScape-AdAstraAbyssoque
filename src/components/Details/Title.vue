@@ -6,7 +6,7 @@
       </h1>
       <div class="rating flex ml-8">
         <ReviewStars
-          :count="4.6"
+          :count="4.7"
           :height="'3rem'"
           :width="'3rem'"
         />
@@ -14,9 +14,9 @@
     </div>
 
     <div class="mb-3">
-      <Tag :tagType="'accomodation'" :content="'Villa'" />
+      <Tag :tagType="'accomodation'" :content="type" />
       <Tag :tagType="'negotiation'" />
-      <Tag :tagType="'atmosphere'" :content="'City'" />
+      <Tag :tagType="'atmosphere'" :content="atmosphere" />
     </div>
 
     <div class="location text-lg">
@@ -48,6 +48,8 @@ export default {
     name: String,
     location: String,
     covid: Number,
+    type: String,
+    atmosphere: String,
   }
 };
 </script>

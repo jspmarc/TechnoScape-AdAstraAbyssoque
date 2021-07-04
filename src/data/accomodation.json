@@ -1,12 +1,12 @@
 [
   {
     "id": "1",
-    "name": "Pacific Villa",
-    "type": "villa",
+    "name": "Glamping Looka",
+    "type": "glamping",
     "description": "Proin eu nibh fringilla, imperdiet urna tristique, venenatis purus. Aliquam eget ipsum justo. Sed sit amet fermentum velit, at varius neque. Fusce libero sapien, vestibulum sagittis lorem pretium, mollis egestas nisl. Cras laoreet convallis purus quis malesuada. Donec aliquet scelerisque quam vitae bibendum. Donec porta quam et orci ultrices cursus vitae eget elit. Aenean eleifend, velit sed commodo sagittis, ex nisi eleifend dolor, in malesuada dui neque ut purus. Nunc pellentesque non mauris ut tristique. Pellentesque pharetra eu erat eu pellentesque. Mauris massa neque, scelerisque a semper id, ultrices et orci. Vivamus eget hendrerit enim. Nam lobortis nisl ac lobortis elementum. Sed consectetur lectus sem, quis lacinia est porta in. Vestibulum et lobortis ligula. Quisque orci tellus, fringilla dictum imperdiet in, egestas a massa.",
     "atmosphore": "city",
     "negotiable": true,
-    "location": "Thamrin, Jakarta",
+    "location": "Megakuningan, Jakarta",
     "locationLat": -5.136630,
     "locationLon": 119.409576,
     "rooms": [
@@ -61,11 +61,11 @@
       }
     ],
     "photos": [
-      "villa4.jpg",
-      "villa1.jpg",
-      "villa2.jpg",
-      "villa3.jpg",
-      "villa5.jpg"
+      "glamping4.jpg",
+      "glamping5.jpg",
+      "glamping2.jpg",
+      "glamping3.jpeg",
+      "glamping5.jpg"
     ],
     "amenities": {
       "internet": ["LAN", "wi-fi"],
