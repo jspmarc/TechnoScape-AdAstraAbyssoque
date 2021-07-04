@@ -1,5 +1,5 @@
 <template>
-  <div class="all">
+  <div class="container">
     <div class="head flex">
       <h1 class="inter-bold">
         {{ name }}
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.all {
+.container {
   background-color: var(--white);
 
   .head {

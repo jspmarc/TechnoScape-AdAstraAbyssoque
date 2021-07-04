@@ -6,7 +6,7 @@
       </h1>
       <p class="sub mt-2">
         We will find the nearest suitable accomodation near the location based
-        on your preferences.
+        on your preferences
       </p>
       <select name="loc" class="select mt-6">
         <option value="jakarta">Jakarta</option>

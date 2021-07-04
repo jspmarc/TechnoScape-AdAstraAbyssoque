@@ -1,10 +1,10 @@
 <template>
   <div class="container ml-5">
-    <p v-if="query">
+    <p v-if="query" class="mb-5">
       Showing results for: "<span style="color:#C22929">{{ query }}</span
       >"
     </p>
-    <p v-if="recommend && recommendStatus">
+    <p v-if="recommend && recommendStatus" class="mb-5">
       Here are some accomodations based on
       <span style="color:#C22929">your preferences</span>.
     </p>
@@ -50,7 +50,7 @@
     </div>
     <div
       class="item-container"
-      v-for="(item, index) in searchResult"
+      v-for="(item, index) in searchResult()"
       :key="index"
     >
       <SearchItem
@@ -72,6 +72,7 @@
 <script>
 import SearchItem from "./SearchItem";
 import data from "../../data/searchResult.json";
+import dataRec from "../../data/searchRecommendation.json";
 
 export default {
   props: {
@@ -87,13 +88,13 @@ export default {
       if (this.$store.state.recommend) this.recommend = true;
       this.$store.state.recommend = false;
     },
+    searchResult() {
+      return this.recommend ? dataRec : data;
+    },
   },
   computed: {
     query() {
       return this.$store.state.query || this.$store.state.queryNav;
-    },
-    searchResult() {
-      return data;
     },
   },
   mounted() {
