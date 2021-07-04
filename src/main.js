@@ -17,7 +17,9 @@ import {
   faPlusCircle,
   faMinusCircle,
   faShieldVirus,
-  faCommentAlt
+  faCommentAlt,
+  faImages,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
 
@@ -34,6 +36,8 @@ library.add(faPlusCircle);
 library.add(faMinusCircle);
 library.add(faShieldVirus);
 library.add(faCommentAlt);
+library.add(faImages);
+library.add(faPlus);
 
 const app = createApp(App);
 app.use(store);
