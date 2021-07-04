@@ -25,6 +25,12 @@ import {
   faPaperPlane,
   faUser,
   faDoorOpen,
+  faWifi,
+  faBell,
+  faParking,
+  faTv,
+  faUtensils,
+  faBus
 } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 
@@ -49,6 +55,12 @@ library.add(faPaperclip);
 library.add(faPaperPlane);
 library.add(faUser);
 library.add(faDoorOpen);
+library.add(faWifi);
+library.add(faBell);
+library.add(faParking);
+library.add(faTv);
+library.add(faUtensils);
+library.add(faBus);
 
 const app = createApp(App);
 app.use(store);
