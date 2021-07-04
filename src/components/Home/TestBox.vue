@@ -8,18 +8,18 @@
     <RecommendationTest v-if="showModal" @close="showModal = false" />
     <div class="flex flex-col justify-center bg-white rounded-2xl p-20">
         <p class="text-xl">Destination</p>
-        <div class="search-box flex items-center">
+        <div class="search-box px-3 flex items-center rounded-lg">
             <font-awesome-icon icon="map-marker-alt" class="icon" />
             <input
-            type="text"
-            class="search-input"
-            placeholder="Search your vacation ..."
+                type="text"
+                class="search-input"
+                placeholder="Search your vacation ..."
             />
         </div>
         <div class="grid grid-cols-3 gap-8 my-8">
             <div>
                 <p class="text-xl">Check-in</p>
-                <div class="search-box flex items-center">
+                <div class="search-box px-3 flex items-center rounded-lg">
                     <font-awesome-icon icon="calendar" class="icon" />
                     <input
                         type="text"
@@ -30,7 +30,7 @@
             </div>
             <div>
                 <p class="text-xl">Duration</p>
-                <div class="search-box flex items-center">
+                <div class="search-box px-3 flex items-center rounded-lg">
                     <font-awesome-icon icon="moon" class="icon" />
                     <select class="search-input-select w-full ml-1">
                         <option>1 night</option>
@@ -39,7 +39,7 @@
             </div>
             <div>
                 <p class="text-xl">Check-out</p>
-                <div class="search-box flex items-center">
+                <div class="search-box px-3 flex items-center rounded-lg">
                     <font-awesome-icon icon="calendar" class="icon w-full" />
                     <input
                         type="text"
@@ -50,20 +50,45 @@
             </div>
         </div>
         <div class="grid grid-cols-3 gap-8 items-end">
-          <div>
-              <p class="text-xl">Guests and Rooms</p>
-              <div class="search-box flex items-center justify-between">
-                <font-awesome-icon icon="person-booth" class="icon" />
-                <select class="search-input-select w-full ml-1">
-                  <option>1 night</option>
-                </select>
-              </div>
-          </div>
+            <div class="dropdown">
+                <p class="text-xl">Guests and Rooms</p>
+                <div class="search-box px-3 flex items-center rounded-lg justify-between">
+                    <font-awesome-icon icon="person-booth" class="icon" />
+                    <font-awesome-icon icon="chevron-down" class="icon" @click="showGuest = true"/>
+                </div>
+                <div v-if="showGuest" class="absolute grid grid-cols-3 gap-8 pr-80 w-full overflow-x-hidden">
+                    <div class="px-3 py-3 expand-container rounded-lg flex flex-col">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-row items-center">
+                                <font-awesome-icon icon="person-booth" class="person-icon" />
+                                <p class="ml-2">Guest(s)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <font-awesome-icon icon="minus-circle" class="quantity-button" @click="decreaseQuantityGuest()" />
+                                <p class="w-12 text-center">{{guest}}</p>
+                                <font-awesome-icon icon="plus-circle" class="quantity-button" @click="increaseQuantityGuest()"/>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mt-6">
+                            <div class="flex flex-row items-center">
+                                <font-awesome-icon icon="person-booth" class="person-icon" />
+                                <p class="ml-2">Room(s)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <font-awesome-icon icon="minus-circle" class="quantity-button" @click="decreaseQuantityRoom()"/>
+                                <p class="w-12 text-center">{{room}}</p>
+                                <font-awesome-icon icon="plus-circle" class="quantity-button" @click="increaseQuantityRoom()"/>
+                            </div>
+                        </div>
+                        <p class="mt-6 text-right done-text" @click="showGuest = false">Done</p>
+                    </div>
+                </div>
+            </div>
           <div/>
           <div class="flex flex-col">
             <button class="button-blue p-2 rounded-3xl">SEARCH</button>
           </div>
-      </div>
+        </div>
     </div>
   </div>
 </template>
@@ -78,8 +103,29 @@ export default {
   data() {
     return {
       showModal: false,
+      showGuest: false,
+      guest: 1,
+      room: 1
     };
   },
+  methods: {
+      increaseQuantityGuest() {
+          this.guest ++;
+      },
+      decreaseQuantityGuest() {
+          if(this.guest > 1) {
+            this.guest --;
+          }
+      },
+      increaseQuantityRoom() {
+          this.room ++;
+      },
+      decreaseQuantityRoom() {
+          if(this.room > 1) {
+            this.room --;
+          }
+      }
+  }
 };
 </script>
 
@@ -90,9 +136,7 @@ export default {
 
 .search-box {
   background: #e5f1ff;
-  padding: 0 10px;
   color: #8cb9fd;
-  border-radius: 5px;
   height: 38px;
 }
 
@@ -124,7 +168,36 @@ export default {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none;
-  color: #171123;
+    outline: none;
+    color: #171123;
+}
+
+.expand-container {
+    background-color: #C7E0FF;
+}
+
+.quantity-button {
+    color: #2759AA;
+}
+
+.quantity-button:hover {
+    cursor: pointer;
+}
+
+.person-icon {
+    color: #2759AA;
+}
+
+.done-text {
+    color: #2759AA;
+}
+
+.done-text:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    overflow-x: hidden;
+    transition-duration: 0.5s;
 }
 </style>

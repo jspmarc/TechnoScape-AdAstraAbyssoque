@@ -4,15 +4,7 @@ import store from "./store";
 import router from "./router";
 import { createApp } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import {
-  faSearch,
-  faStar,
-  faMapMarkerAlt,
-  faCalendar,
-  faMoon,
-  faPersonBooth,
-  faTimes
-} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faStar, faMapMarkerAlt, faCalendar, faMoon, faPersonBooth, faTimes, faChevronDown, faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import './index.css';
 
 library.add(faSearch);
@@ -22,6 +14,9 @@ library.add(faCalendar);
 library.add(faMoon);
 library.add(faPersonBooth);
 library.add(faTimes);
+library.add(faChevronDown);
+library.add(faPlusCircle);
+library.add(faMinusCircle);
 
 const app = createApp(App);
 app.use(store);

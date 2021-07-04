@@ -1,14 +1,14 @@
 <template>
-    <div class="test-box-container grid grid-cols-2 gap-6">
+    <div class="test-box-container grid grid-cols-2 gap-10">
         <div class="img-container h-48">
 
         </div>
         <div class="flex flex-col justify-center">
-            <p class="font-bold text-3xl">Blah Blah Hotel</p>
-            <div class="mt-2 flex flex-row">
+            <p class="font-bold text-4xl">Blah Blah Hotel</p>
+            <div class="mt-4 flex flex-row">
                 <div>
                     <p>
-                        <span class="font-bold text-4xl letter-spacing">4.3</span>
+                        <span class="font-bold text-5xl letter-spacing">4.3</span>
                         <span>&nbsp;/&nbsp;5</span>
                     </p>
                     <div class="flex flex-row">
@@ -19,8 +19,9 @@
                         <font-awesome-icon icon="star" class="icon" />
                     </div>
                 </div>
-                <div class="w-3/4 ml-4">
+                <div class="w-3/4 ml-4 text-lg">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <p class="learn-more"><u>Learn more</u></p>
                 </div>
             </div>
         </div>
@@ -46,6 +47,10 @@ export default {};
 }
 
 .letter-spacing {
-    letter-spacing: 4px;
+    letter-spacing: 0px;
+}
+
+.learn-more {
+    color: #053267;
 }
 </style>
