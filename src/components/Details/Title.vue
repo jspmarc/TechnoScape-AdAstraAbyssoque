@@ -5,11 +5,7 @@
         {{ name }}
       </h1>
       <div class="rating flex ml-8">
-        <ReviewStars
-          :count="4.6"
-          :height="'3rem'"
-          :width="'3rem'"
-        />
+        <ReviewStars :count="4.6" :height="'3rem'" :width="'3rem'" />
       </div>
     </div>
 
@@ -28,16 +24,17 @@
 
     <div class="csr text-lg">
       <font-awesome-icon icon="shield-virus" />
-      <span>
-        {{ covid }} / 5
+      <span> {{ covid }} / 5 </span>
+      <span class="text-xs"
+        >* COVID-19 rating evaluates how safe an accomodation is
       </span>
     </div>
   </div>
 </template>
 
 <script>
-import ReviewStars from '../ReviewStars.vue';
-import Tag from '../Tags.vue';
+import ReviewStars from "../ReviewStars.vue";
+import Tag from "../Tags.vue";
 
 export default {
   components: {
@@ -48,7 +45,7 @@ export default {
     name: String,
     location: String,
     covid: Number,
-  }
+  },
 };
 </script>
 
@@ -62,7 +59,7 @@ export default {
   }
 
   .location {
-    color: #2759AA;
+    color: #2759aa;
 
     span {
       margin-left: 1rem;
@@ -70,7 +67,7 @@ export default {
   }
 
   .csr {
-    color: #42E0C9;
+    color: #42e0c9;
     margin-bottom: 1rem;
 
     span {
