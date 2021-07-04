@@ -65,7 +65,7 @@
       <div class="row mt-5 mb-5 items-end">
         <div class="row items-end">
           <h3 class="mr-3">Total Price:</h3>
-          <p>Rp999.999</p>
+          <p>Rp599.999</p>
         </div>
         <button
           class="confirm"
@@ -85,7 +85,7 @@
       <p class="grey">1 guest</p>
       <div class="row items-end mt-5">
         <h3 class="mr-3">Total Price:</h3>
-        <p>Rp999.999</p>
+        <p>Rp599.999</p>
       </div>
     </div>
 
