@@ -4,11 +4,24 @@ import store from "./store";
 import router from "./router";
 import { createApp } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faSearch, faStar, faMapMarkerAlt, faCalendar, faMoon, faPersonBooth, faTimes, faChevronDown, faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSearch,
+  faStar,
+  faStarHalfAlt,
+  faMapMarkerAlt,
+  faCalendar,
+  faMoon,
+  faPersonBooth,
+  faTimes,
+  faChevronDown,
+  faPlusCircle,
+  faMinusCircle
+} from "@fortawesome/free-solid-svg-icons";
 import './index.css';
 
 library.add(faSearch);
 library.add(faStar);
+library.add(faStarHalfAlt);
 library.add(faMapMarkerAlt);
 library.add(faCalendar);
 library.add(faMoon);
