@@ -34,6 +34,7 @@
           SIGN UP
         </router-link>
       </button>
+      <img src="../../assets/john.jpg" v-if="loginStatus" class="ml-10 mr-20" />
     </div>
   </div>
 </template>
@@ -87,6 +88,13 @@ export default {
 
 .nav-right {
   display: flex;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
 }
 
 .text-only-button-link {
