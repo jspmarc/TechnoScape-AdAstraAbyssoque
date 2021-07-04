@@ -18,9 +18,8 @@
       <div class="flex flex-row items-center my-2">
         <input
           type="radio"
-          id="html"
-          name="fav_language"
-          value="HTML"
+          name="rating"
+          value="5"
           class="mr-2"
         />
         <ReviewStars :count="5" />
@@ -28,9 +27,8 @@
       <div class="flex flex-row items-center my-1">
         <input
           type="radio"
-          id="html"
-          name="fav_language"
-          value="HTML"
+          name="rating"
+          value="4"
           class="mr-2"
         />
         <ReviewStars :count="4" />
@@ -39,9 +37,8 @@
       <div class="flex flex-row items-center my-1">
         <input
           type="radio"
-          id="html"
-          name="fav_language"
-          value="HTML"
+          name="rating"
+          value="3"
           class="mr-2"
         />
         <ReviewStars :count="3" />
@@ -50,9 +47,8 @@
       <div class="flex flex-row items-center my-1">
         <input
           type="radio"
-          id="html"
-          name="fav_language"
-          value="HTML"
+          name="rating"
+          value="2"
           class="mr-2"
         />
         <ReviewStars :count="2" />
@@ -61,9 +57,8 @@
       <div class="flex flex-row items-center my-1">
         <input
           type="radio"
-          id="html"
-          name="fav_language"
-          value="HTML"
+          name="rating"
+          value="1"
           class="mr-2"
         />
         <ReviewStars :count="1" />
@@ -73,29 +68,29 @@
     <div class="flex mt-5 flex-col items-start">
       <p>Staycation Type</p>
       <div class="flex flex-row items-center my-1">
-        <input type="checkbox" id="html" name="fav_language" value="HTML" />
+        <input type="checkbox" name="type" value="villa" />
         <p class="ml-2">Villa</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="checkbox" id="html" name="fav_language" value="HTML" />
+        <input type="checkbox" name="type" value="etc" />
         <p class="ml-2">Etc.</p>
       </div>
     </div>
     <div class="flex mt-5 flex-col items-start">
       <p>Facilities</p>
       <div class="flex flex-row items-center my-1">
-        <input type="checkbox" id="html" name="fav_language" value="HTML" />
-        <p class="ml-2">blabla</p>
+        <input type="checkbox" name="facilities" value="pool" />
+        <p class="ml-2">Swimming Pool</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="checkbox" id="html" name="fav_language" value="HTML" />
+        <input type="checkbox" name="facilities" value="etc" />
         <p class="ml-2">Etc.</p>
       </div>
     </div>
     <div class="flex mt-5 flex-col items-start">
-      <p>COVID-19 safety rating</p>
+      <p>COVID-19 Safety Rating</p>
       <div class="flex flex-row items-center my-2">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio" name="covid" value="5" />
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
@@ -103,7 +98,7 @@
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio" name="covid" value="4" />
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
@@ -111,25 +106,25 @@
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio"  name="covid" value="3" />
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio" name="covid" value="2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <font-awesome-icon icon="shield-virus" class="icon-virus" />
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-1">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio" name="covid" value="1" />
         <font-awesome-icon icon="shield-virus" class="icon-virus ml-2" />
         <p class="ml-2">and above</p>
       </div>
       <div class="flex flex-row items-center my-2">
-        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <input type="radio" name="covid" value="1" />
         <p class="ml-2">Not rated</p>
       </div>
     </div>
