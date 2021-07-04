@@ -2,7 +2,7 @@
   <div v-if="tagType === 'accomodation'" class="tag accomodation-tag">
     {{content}}
   </div>
-  <div v-else-if="tagType === 'atmosphere'" class="tag atmosphere-tag">
+  <div v-else-if="tagType === 'setting'" class="tag setting-tag">
     {{content}}
   </div>
   <div v-else-if="tagType === 'negotiation'" class="tag negotiation-tag">
@@ -38,7 +38,7 @@ export default {
   background-color: #8CB9FD;
 }
 
-.atmosphere-tag {
+.setting-tag {
   background-color: #1B9D84;
 }
 </style>

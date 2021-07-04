@@ -2,7 +2,7 @@
   <div class="detail px-20 py-10">
     <Title v-bind="getAccomodationData"/>
     <Gallery v-bind="getAccomodationData"/>
-    <div class="content flex">
+    <div class="content">
       <div class="left">
         <ContentLeft v-bind="getAccomodationData" />
       </div>

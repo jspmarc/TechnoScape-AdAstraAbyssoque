@@ -16,7 +16,7 @@
     <div class="mb-3">
       <Tag :tagType="'accomodation'" :content="type" />
       <Tag :tagType="'negotiation'" />
-      <Tag :tagType="'atmosphere'" :content="atmosphere" />
+      <!-- <Tag :tagType="'setting'" :content="setting" /> -->
     </div>
 
     <div class="location text-lg">
@@ -49,7 +49,7 @@ export default {
     location: String,
     covid: Number,
     type: String,
-    atmosphere: String,
+    setting: String,
   }
 };
 </script>
