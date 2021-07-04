@@ -2,14 +2,12 @@
   <div class="container">
     <img :src="require('../../assets/' + image)" />
     <div class="info">
-      <div class="row justify-between">
-        <div class="row-left flex flex-row">
-          <p class="mr-5">
+      <div class="row justify-between items-center">
+        <div class="row-left flex flex-row items-center">
+          <p class="mr-3 text-xl">
             <strong>{{ name }}</strong>
           </p>
-          <div class="mr-1" v-for="index in parseInt(star)" :key="index">
-            <p>*</p>
-          </div>
+          <ReviewStars :count="parseInt(star)"/>
         </div>
         <div class="row-right">
           <p>
@@ -18,17 +16,20 @@
         </div>
       </div>
       <div class="row mt-2">
-        <button v-if="badge1" class="badge dark">{{ badge1 }}</button>
+        <button v-if="badge1" class="badge dark mr-1">{{ badge1 }}</button>
         <button v-if="badge2" class="badge light">{{ badge2 }}</button>
       </div>
-      <div class="row mt-4">
+      <div class="row mt-4 items-center">
+        <font-awesome-icon icon="map-marker-alt" class="icon-location mr-2 text-blue" />
         <p class="text-blue">{{ location }}</p>
       </div>
-      <div class="row">
-        <p class="text-blue">{{ rating }}/10 ({{ numReview }})</p>
+      <div class="row mt-2 items-center">
+        <font-awesome-icon icon="comment-alt" class="icon-location mr-2 text-blue" />
+        <p class="text-blue">{{ rating }}&nbsp;/&nbsp;10 ({{ numReview }})</p>
       </div>
-      <div class="row">
-        <p class="text-green">{{ covid }}/5</p>
+      <div class="row mt-2 items-center">
+        <font-awesome-icon icon="shield-virus" class="icon-location mr-2 text-green" />
+        <p class="text-green">{{ covid }}&nbsp;/&nbsp;5</p>
       </div>
       <div class="row">
         <p class="text-blue text-large">Book now!</p>
@@ -38,6 +39,7 @@
 </template>
 
 <script>
+import ReviewStars from "../ReviewStars.vue";
 export default {
   props: {
     name: String,
@@ -51,13 +53,15 @@ export default {
     covid: String,
     image: String,
   },
+  components: {
+    ReviewStars,
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .container {
   width: 100%;
-  height: 200px;
   box-shadow: 0px 4px 20px #c7e0ff;
   border-radius: 10px;
   display: flex;
@@ -68,7 +72,6 @@ export default {
 
   img {
     width: 20%;
-    height: 100%;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
   }
@@ -83,17 +86,14 @@ export default {
       flex-direction: row;
 
       .text-blue {
-        font-size: 13px;
         color: #2759aa;
       }
 
       .text-green {
-        font-size: 13px;
         color: #42e0c9;
       }
 
       .text-large {
-        font-size: 15px;
         text-decoration: underline;
         margin-left: auto;
 
@@ -105,7 +105,6 @@ export default {
       .badge {
         display: block;
         padding: 1px 10px;
-        margin-right: 10px;
         color: #fff;
       }
 
