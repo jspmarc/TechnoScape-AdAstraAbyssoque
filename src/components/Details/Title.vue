@@ -71,6 +71,7 @@ export default {
 
   .csr {
     color: #42E0C9;
+    margin-bottom: 1rem;
 
     span {
       margin-left: 1rem;
