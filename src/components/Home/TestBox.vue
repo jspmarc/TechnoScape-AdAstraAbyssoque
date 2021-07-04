@@ -24,7 +24,7 @@
                 <div class="search-box px-3 flex items-center rounded-lg">
                     <font-awesome-icon icon="calendar" class="icon" />
                     <input
-                        type="text"
+                        type="date"
                         class="search-input w-full"
                         placeholder="Insert your check-in date ..."
                     />
@@ -44,7 +44,7 @@
                 <div class="search-box px-3 flex items-center rounded-lg">
                     <font-awesome-icon icon="calendar" class="icon w-full" />
                     <input
-                        type="text"
+                        type="date"
                         class="search-input w-full"
                         placeholder="Insert your check-out date ..."
                     />
