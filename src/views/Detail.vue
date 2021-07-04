@@ -56,7 +56,7 @@ export default {
 
     .right {
       align-self: flex-start;
-      width: 45vw;
+      width: 60vw;
     }
   }
 }

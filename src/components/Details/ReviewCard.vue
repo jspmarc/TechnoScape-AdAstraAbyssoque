@@ -16,7 +16,7 @@ import ReviewStars from "../ReviewStars.vue";
 export default {
   props: {
     name: String,
-    stars: String,
+    stars: Number,
     comment: String
   },
   components: {

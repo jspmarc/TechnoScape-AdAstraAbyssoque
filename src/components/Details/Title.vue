@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="head flex">
-      <h1 class="inter-bold">
+      <h1 class="inter-bold text-6xl mb-4">
         {{ name }}
       </h1>
-      <div class="rating flex ml-8">
+      <div class="rating flex ml-4 -mt-1">
         <ReviewStars
           :count="4.7"
-          :height="'3rem'"
-          :width="'3rem'"
+          :height="'2rem'"
+          :width="'2rem'"
         />
       </div>
     </div>

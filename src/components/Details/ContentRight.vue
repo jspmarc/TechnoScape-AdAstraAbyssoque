@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-      <h3 class="inter-semi text-center">
+      <h3 class="inter-semi text-center text-xl">
         Available Room(s)
       </h3>
       <div class="check-in mt-4">
-        <label for="check-in-time" class="text-xl">Check-in</label>
+        <label for="check-in-time" class="text-lg">Check-in</label>
         <div class="input-container input-bg">
           <font-awesome-icon class="icon" icon="calendar"/>
           <input type="date" id="check-in-time"
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="duration mt-3">
-        <label for="duration" class="text-xl">Duration</label>
+        <label for="duration" class="text-lg">Duration</label>
         <div class="input-container input-bg">
           <font-awesome-icon icon="moon" class="icon" />
           <select class="input-select w-full ml-4" name="duration" v-model="duration">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="check-out mt-3">
-        <p class="text-xl">Check-out</p>
+        <p class="text-lg">Check-out</p>
         <div class="input-container input-bg">
           <font-awesome-icon class="icon" icon="calendar"/>
           <span class="w-full ml-4">
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="check-in mt-4">
-        <label for="check-in-time" class="text-xl">Guests and Rooms</label>
+        <label for="check-in-time" class="text-lg">Guests and Rooms</label>
         <div class="gnr input-bg">
           <div class="guests flex mt-1 mb-5">
             <font-awesome-icon class="icon" icon="user"/>
@@ -72,11 +72,19 @@
           </div>
         </div>
       </div>
+      <div v-for="(room, idx) in rooms" :key="idx">
+        <RoomType v-bind="room" />
+      </div>
   </div>
 </template>
 
 <script>
+import RoomType from '../Details/RoomType.vue';
+
 export default {
+  components: {
+    RoomType,
+  },
   data() {
     return {
       checkIn: new Date().toISOString().substr(0, 10),
@@ -90,7 +98,7 @@ export default {
     };
   },
   props: {
-    description: String,
+    rooms: Array,
   },
   methods: {
     checkOut() {
@@ -99,16 +107,16 @@ export default {
       return toRet.toISOString().substr(0, 10);
     },
     addRoom() {
-      if (this.roomQty < 999) this.roomQty++;
+      if (this.roomQty < 999) this.roomQty += 1;
     },
     decRoom() {
-      if (this.roomQty > 1) this.roomQty--;
+      if (this.roomQty > 1) this.roomQty -= 1;
     },
     addGuest() {
-      if (this.guestQty < 999) this.guestQty++;
+      if (this.guestQty < 999) this.guestQty += 1;
     },
     decGuest() {
-      if (this.guestQty > 1) this.guestQty--;
+      if (this.guestQty > 1) this.guestQty -= 1;
     }
   },
   computed: {
@@ -123,8 +131,9 @@ export default {
 .container {
   border-radius: 1rem;
   box-shadow: 0px 4px 20px #C7E0FF;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   color: var(--black);
+  font-size: 1rem;
 
   .icon {
     color: #8cb9fd;
