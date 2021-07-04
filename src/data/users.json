@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Meane Jikha",
+    "picture": "signup-facebook.png"
+  },
+  {
+    "id": 2,
+    "name": "Jarcello Mosep",
+    "picture": "signup-twitter.png"
+  },
+  {
+    "id": 3,
+    "name": "Deemas G.",
+    "picture": "signup-google.png"
+  },
+  {
+    "id": 4,
+    "name": "Deeyon",
+    "picture": "signup-facebook.png"
+  }
+]
