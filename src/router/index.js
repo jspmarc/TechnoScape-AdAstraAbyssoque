@@ -7,6 +7,7 @@ import Search from "../views/Search.vue";
 import Checkout from "../views/Checkout.vue";
 import Negotiation from "../views/Negotiation.vue";
 import Chat from "../views/Chat.vue";
+import Order from "../views/Order.vue";
 
 const routes = [
   {
@@ -49,11 +50,20 @@ const routes = [
     name: "Chat",
     component: Chat,
   },
+  {
+    path: "/order",
+    name: "Order",
+    component: Order,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(""),
   routes,
+});
+
+router.beforeEach(() => {
+  window.scrollTo(0, 0);
 });
 
 export default router;

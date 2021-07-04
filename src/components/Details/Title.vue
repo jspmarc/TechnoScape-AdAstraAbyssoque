@@ -28,16 +28,17 @@
 
     <div class="csr text-lg">
       <font-awesome-icon icon="shield-virus" />
-      <span>
-        {{ covid }} / 5
+      <span> {{ covid }} / 5 </span>
+      <span class="text-xs"
+        >* COVID-19 rating evaluates how safe an accomodation is
       </span>
     </div>
   </div>
 </template>
 
 <script>
-import ReviewStars from '../ReviewStars.vue';
-import Tag from '../Tags.vue';
+import ReviewStars from "../ReviewStars.vue";
+import Tag from "../Tags.vue";
 
 export default {
   components: {
@@ -64,7 +65,7 @@ export default {
   }
 
   .location {
-    color: #2759AA;
+    color: #2759aa;
 
     span {
       margin-left: 1rem;
@@ -72,7 +73,7 @@ export default {
   }
 
   .csr {
-    color: #42E0C9;
+    color: #42e0c9;
     margin-bottom: 1rem;
 
     span {

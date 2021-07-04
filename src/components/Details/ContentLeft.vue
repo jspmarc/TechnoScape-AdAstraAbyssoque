@@ -11,7 +11,7 @@
         <div class="text-md">
           <div class="flex flex-row items-center my-1">
             <font-awesome-icon icon="wifi" class="icon mr-1" />
-            <p>wi-fi</p>
+            <p>Wi-fi</p>
           </div>
           <div class="flex flex-row items-center my-1">
             <font-awesome-icon icon="bell" class="icon mr-1" />
@@ -40,13 +40,9 @@
     </div>
     <div class="mt-8 flex flex-col">
       <h1 class="text-3xl font-bold">Review</h1>
-      <div
-        v-for="(item, index) in getData"
-        :key="index"
-        class="item-container"
-      >
+      <div v-for="(item, index) in getData" :key="index" class="item-container">
         <div v-if="!isMore">
-          <div v-if="index < 3" >
+          <div v-if="index < 3">
             <ReviewCard
               :name="item.name"
               :stars="item.stars"
@@ -62,16 +58,24 @@
           />
         </div>
       </div>
-      <button v-if="!isMore" class="button rounded-2xl px-4 py-1 m-auto my-6" @click="isMore = true">
+      <button
+        v-if="!isMore"
+        class="button rounded-2xl px-4 py-1 m-auto my-6"
+        @click="isMore = true"
+      >
         Load More Reviews
       </button>
-      <button v-if="isMore" class="button rounded-2xl px-4 py-1 m-auto my-6" @click="isMore = false">
+      <button
+        v-if="isMore"
+        class="button rounded-2xl px-4 py-1 m-auto my-6"
+        @click="isMore = false"
+      >
         Load Less
       </button>
     </div>
     <div class="mt-2">
       <h1 class="text-3xl font-bold">Location</h1>
-      <img class="mt-3 rounded-xl" src="../../assets/map.jpg"/>
+      <img class="mt-3 rounded-xl" src="../../assets/map.png" />
     </div>
   </div>
 </template>
@@ -84,22 +88,27 @@ export default {
     description: String,
   },
   components: {
-    ReviewCard
+    ReviewCard,
   },
   computed: {
     getData() {
       return data;
-    }
+    },
   },
   data() {
     return {
-      isMore: false
-    }
-  }
+      isMore: false,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .icon {
   width: 25px;
 }
@@ -109,7 +118,7 @@ export default {
 }
 
 .search-box {
-  border: 1px solid #8CB9FD;
+  border: 1px solid #8cb9fd;
 }
 
 .image {
@@ -117,8 +126,8 @@ export default {
 }
 
 .button {
-  background: #2759AA;
-  color: #FCFEFF;
+  background: #2759aa;
+  color: #fcfeff;
 }
 
 .item-container {

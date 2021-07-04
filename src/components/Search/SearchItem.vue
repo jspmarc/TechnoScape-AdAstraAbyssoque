@@ -4,8 +4,8 @@
     <div class="info">
       <div class="row justify-between items-center">
         <div class="row-left flex flex-row items-center">
-          <p class="mr-3 text-xl inter-semi"> {{ name }} </p>
-          <ReviewStars :count="parseInt(star)"/>
+          <p class="mr-3 text-xl inter-semi">{{ name }}</p>
+          <ReviewStars :count="parseInt(star)" />
         </div>
         <div class="row-right inter">
           <p>
@@ -18,19 +18,28 @@
         <button v-if="badge2" class="badge light">{{ badge2 }}</button>
       </div>
       <div class="row mt-4 items-center">
-        <font-awesome-icon icon="map-marker-alt" class="icon-location mr-2 text-blue" />
+        <font-awesome-icon
+          icon="map-marker-alt"
+          class="icon-location mr-2 text-blue"
+        />
         <p class="text-blue">{{ location }}</p>
       </div>
       <div class="row mt-2 items-center">
-        <font-awesome-icon icon="comment-alt" class="icon-location mr-2 text-blue" />
+        <font-awesome-icon
+          icon="comment-alt"
+          class="icon-location mr-2 text-blue"
+        />
         <p class="text-blue">{{ rating }}&nbsp;/&nbsp;10 ({{ numReview }})</p>
       </div>
       <div class="row mt-2 items-center">
-        <font-awesome-icon icon="shield-virus" class="icon-location mr-2 text-green" />
+        <font-awesome-icon
+          icon="shield-virus"
+          class="icon-location mr-2 text-green"
+        />
         <p class="text-green">{{ covid }}&nbsp;/&nbsp;5</p>
       </div>
       <div class="row">
-        <p class="text-blue text-large">Book now!</p>
+        <p class="text-blue text-large" @click="goDetail">Learn More</p>
       </div>
     </div>
   </div>
@@ -50,6 +59,11 @@ export default {
     numReview: String,
     covid: String,
     image: String,
+  },
+  methods: {
+    goDetail() {
+      this.$router.push({ path: "/detail" });
+    },
   },
   components: {
     ReviewStars,

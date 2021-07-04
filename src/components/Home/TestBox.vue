@@ -122,7 +122,9 @@
         </div>
         <div />
         <div class="flex flex-col">
-          <button class="button-blue p-2 rounded-3xl inter">SEARCH</button>
+          <button class="button-blue p-2 rounded-3xl inter" @click="onSearch">
+            SEARCH
+          </button>
         </div>
       </div>
     </div>
@@ -160,6 +162,9 @@ export default {
       if (this.room > 1) {
         this.room--;
       }
+    },
+    onSearch() {
+      this.$router.push({ path: "/search" });
     },
   },
 };
