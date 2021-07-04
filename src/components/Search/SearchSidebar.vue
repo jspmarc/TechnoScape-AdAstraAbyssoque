@@ -103,6 +103,9 @@
         <p class="ml-2">Not rated</p>
       </div>
     </div>
+    <div class="mt-5">
+      <button class="rounded-2xl filter-button text-white px-4 py-1">Apply Filter</button>
+    </div>
   </div>
 </template>
 
@@ -148,5 +151,9 @@ select:focus {
 
 .icon-virus {
   color: #42E0C9;
+}
+
+.filter-button {
+  background: #2759AA;
 }
 </style>
